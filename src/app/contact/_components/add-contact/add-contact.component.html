@@ -1,0 +1,408 @@
+<div class="container-fluid side-form-right">
+  <div class="header">
+    <h4>Create Contact</h4>
+  </div>
+
+  <form [formGroup]="contactForm" novalidate>
+    <div class="body">
+      <div class="row">
+        <div class="col-md-3 mb-10">
+          <label for="salutation" translate>Salutation</label>
+          <select class="form-control" id="salutation" formControlName="salutation">
+            <option value="">Select</option>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+            <option value="Ms">Ms</option>
+          </select>
+          <!-- <small [hidden]="form.salutation.valid || form.salutation.untouched" class="text-danger" translate>
+              <div *ngIf="form.salutation.errors.required" translate>Salutation is required</div>
+            </small> -->
+        </div>
+        <div class="col pl-0 mb-10">
+          <label for="firstName" translate>First Name</label>
+          <input type="text" class="form-control" id="firstName" formControlName="firstName" />
+          <small [hidden]="form.firstName.valid || form.firstName.untouched" class="text-danger" translate>
+            <div *ngIf="form.firstName.errors.required" translate>First name is required</div>
+          </small>
+        </div>
+        <div class="col pl-0 mb-10">
+          <label for="lastName" translate>Last Name</label>
+          <input type="text" class="form-control" id="lastName" formControlName="lastName" />
+          <small [hidden]="form.lastName.valid || form.lastName.untouched" class="text-danger" translate>
+            <div *ngIf="form.lastName.errors.required" translate>Last name is required</div>
+          </small>
+        </div>
+      </div>
+      <div class="mb-10 text-icon">
+        <label class="d-block">Upload Profile Picture</label>
+        <input type="file" class="form-control" style="height: 38px" />
+      </div>
+      <div class="mb-10 text-icon">
+        <label for="email" translate>Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email" />
+        <span
+          class="fas fa-plus-circle icon-label c-pointer"
+          title="Add More Email"
+          data-toggle="modal"
+          data-target="#mdlMoreEmails"
+          style="top: 30px"
+        ></span>
+
+        <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+          <div *ngIf="form.email.errors.required" translate>Email name is required</div>
+        </small>
+      </div>
+      <div class="mb-10 text-icon">
+        <label for="mobile" translate>Mobile Number</label>
+        <input type="text" class="form-control" id="mobile" formControlName="mobile" />
+        <small [hidden]="form.mobile.valid || form.mobile.untouched" class="text-danger" translate>
+          <div *ngIf="form.mobile.errors.required" translate>Mobile number is required</div>
+        </small>
+        <span
+          class="fas fa-plus-circle icon-label c-pointer"
+          title="Add More Number"
+          data-toggle="modal"
+          data-target="#mdlMoreNumbers"
+          style="top: 30px"
+        ></span>
+      </div>
+      <div class="mb-10">
+        <label for="account" translate>Account</label>
+        <input type="text" class="form-control" id="account" formControlName="account" />
+        <small [hidden]="form.account.valid || form.account.untouched" class="text-danger" translate>
+          <div *ngIf="form.account.errors.required" translate>Account is required</div>
+        </small>
+      </div>
+      <div class="mb-10">
+        <label for="designation" translate>Designation</label>
+        <input type="text" class="form-control" id="designation" formControlName="designation" />
+        <small [hidden]="form.designation.valid || form.designation.untouched" class="text-danger" translate>
+          <div *ngIf="form.designation.errors.required" translate>Designation is required</div>
+        </small>
+      </div>
+      <div class="mb-10">
+        <label for="address" translate>Address</label>
+        <textarea class="form-control text-area" id="address" formControlName="address" rows="3"></textarea>
+        <small [hidden]="form.address.valid || form.address.untouched" class="text-danger" translate>
+          <div *ngIf="form.address.errors.required" translate>Address is required</div>
+        </small>
+      </div>
+      <div class="row">
+        <div class="col pr-0 mb-10">
+          <label for="city" translate>City</label>
+          <input type="text" class="form-control" id="city" formControlName="city" />
+          <small [hidden]="form.city.valid || form.city.untouched" class="text-danger" translate>
+            <div *ngIf="form.city.errors.required" translate>City is required</div>
+          </small>
+        </div>
+        <div class="col mb-10">
+          <label for="state" translate>State</label>
+          <select class="form-control form-control-sm" id="state">
+            <option value="0" selected>Select</option>
+            <option value="Mr">Odisha</option>
+            <option value="Mrs">Kolkata</option>
+            <option value="Ms">Others</option>
+          </select>
+          <!-- <small [hidden]="form.state.valid || form.state.untouched" class="text-danger" translate>
+              <div *ngIf="form.state.errors.required" translate>State is required</div>
+            </small> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col pr-0 mb-10">
+          <label for="country" translate>Country</label>
+          <select class="form-control form-control-sm" id="country">
+            <option value="0" selected>Select</option>
+            <option value="Mr">India</option>
+            <option value="Mrs">America</option>
+            <option value="Miss">London</option>
+            <option value="Ms">Others</option>
+          </select>
+          <!-- <small [hidden]="form.country.valid || form.country.untouched" class="text-danger" translate>
+              <div *ngIf="form.country.errors.required" translate>Country is required</div>
+            </small> -->
+        </div>
+        <div class="col mb-10">
+          <label for="zip" translate>Zip Code</label>
+          <input type="text" class="form-control" id="zip" formControlName="zip" />
+          <small [hidden]="form.zip.valid || form.zip.untouched" class="text-danger" translate>
+            <div *ngIf="form.zip.errors.required" translate>Zip code is required</div>
+          </small>
+        </div>
+      </div>
+      <div class="mb-10">
+        <label for="contactOwner" translate>Contact Owner</label>
+        <select class="form-control form-control-sm" id="owner">
+          <option value="0" selected>Select</option>
+          <option>Sumanta</option>
+          <option>Gaurav</option>
+          <option>Others</option>
+        </select>
+      </div>
+
+      <h5 class="mt-2 mb-2" style="font-size: 16px">Add Visiting Card</h5>
+      <div class="row">
+        <div class="col pr-0 mb-10">
+          <div class="v-card">
+            <span class="d-block">
+              <label>Card Front</label>
+              <span class="float-right">
+                <span class="fas fa-camera mr-2"></span>
+                <span class="fas fa-expand"></span>
+              </span>
+            </span>
+            <div class="img-area mb-10">
+              <span>image</span>
+            </div>
+            <input type="file" class="form-control" />
+          </div>
+        </div>
+        <div class="col mb-10">
+          <div class="v-card">
+            <span class="d-block">
+              <label>Card Back</label>
+              <span class="float-right">
+                <span class="fas fa-camera mr-2"></span>
+                <span class="fas fa-expand"></span>
+              </span>
+            </span>
+            <div class="img-area mb-10">
+              <span>image</span>
+            </div>
+            <input type="file" class="form-control" />
+          </div>
+        </div>
+      </div>
+
+      <h5 class="mt-2 mb-2" style="font-size: 16px">Contact Tags</h5>
+      <div class="accordion" id="contactTags">
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#t1">
+            <h5>Technical Knowledge</h5>
+          </div>
+
+          <div id="t1" class="collapse show" data-parent="#contactTags">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header collapsed" data-toggle="collapse" data-target="#t2">
+            <h5>Position</h5>
+          </div>
+          <div id="t2" class="collapse" data-parent="#contactTags">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header collapsed" data-toggle="collapse" data-target="#t3">
+            <h5>Work Capability</h5>
+          </div>
+          <div id="t3" class="collapse" data-parent="#contactTags">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button class="btn btn-eva mr-2" type="submit" [disabled]="contactForm.invalid || isLoading">
+        <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+        <span translate>Save & New</span>
+      </button>
+      <button class="btn btn-secondary" type="submit" (click)="onSubmit()">
+        <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+        <span translate>Save</span>
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- Add More Emails Modal -->
+<div
+  class="modal fade"
+  id="mdlMoreEmails"
+  tabindex="-1"
+  data-backdrop="false"
+  style="background-color: black; background: rgba(0, 0, 0, 0.3)"
+>
+  <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable" style="max-width: 300px">
+    <div class="modal-content" style="box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)">
+      <div class="modal-header">
+        <h5 class="modal-title">Add More Emails</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="w-100 mb-20">
+          <label>Enter your office mail</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="w-100 mb-4">
+          <label>Enter your work mail</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="w-100 text-center">
+          <input type="button" class="btn btn-secondary" value="Save" data-dismiss="modal" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add More Numbers Modal -->
+<div
+  class="modal fade"
+  id="mdlMoreNumbers"
+  tabindex="-1"
+  data-backdrop="false"
+  style="background-color: black; background: rgba(0, 0, 0, 0.3)"
+>
+  <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable" style="max-width: 300px">
+    <div class="modal-content" style="box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)">
+      <div class="modal-header">
+        <h5 class="modal-title">Add More Numbers</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="w-100 mb-20">
+          <label>Enter your office number</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="w-100 mb-20">
+          <label>Enter your work number</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="w-100 mb-4">
+          <label>Enter your home number</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="w-100 text-center">
+          <input type="button" class="btn btn-secondary" value="Save" data-dismiss="modal" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

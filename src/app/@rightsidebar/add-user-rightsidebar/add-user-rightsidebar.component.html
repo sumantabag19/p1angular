@@ -1,0 +1,237 @@
+<div class="container-fluid">
+  <div [ngClass]="flag ? 'slide-form hide-me' : 'slide-form show-me'">
+    <div class="form-widget">
+      <div class="header">
+        <h4>Add User</h4>
+        <span class="close" (click)="flag = !flag">&times;</span>
+      </div>
+
+      <!-- body start from here -->
+      <form [formGroup]="adduser" (ngSubmit)="onSubmit()">
+        <div class="body">
+          <div class="settings-section">
+            <div class="settings-inner-section bg-white">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <label for="name" translate>Name</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="name" formControlName="firstname" />
+                  </div>
+                  <small [hidden]="form.firstname.valid || form.firstname.untouched" class="text-danger" translate>
+                    <div *ngIf="form.firstname.errors.required" translate>First Name Required</div>
+                    <div *ngIf="form.firstname.errors.maxlength" translate>
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+                <div class="col-md-6">
+                  <label for="name" translate>Last Name</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="name" formControlName="lastname" />
+                  </div>
+                  <small [hidden]="form.lastname.valid || form.lastname.untouched" class="text-danger" translate>
+                    <div *ngIf="form.lastname.errors.required" translate>Last Name Required</div>
+                    <div *ngIf="form.lastname.errors.maxlength" translate>
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="email" translate>Email</label>
+                  <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="email" formControlName="email" />
+                  </div>
+                  <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                    <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+                    <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+                    <div *ngIf="form.email.errors?.maxlength">
+                      <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="mobile" translate>Mobile</label>
+                  <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="mobile" formControlName="mobile" />
+                  </div>
+                  <small [hidden]="form.mobile.valid || form.mobile.untouched" class="text-danger" translate>
+                    <div *ngIf="form.mobile.errors?.required" translate>Mobile Required</div>
+                    <div *ngIf="form.mobile.errors?.pattern" translate>Invalid Mobile</div>
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="name" translate>Job Title</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="name" formControlName="jobtitle" />
+                  </div>
+                  <small [hidden]="form.jobtitle.valid || form.jobtitle.untouched" class="text-danger" translate>
+                    <div *ngIf="form.jobtitle.errors.required" translate>Job Title Required</div>
+                    <div *ngIf="form.jobtitle.errors.maxlength" translate>
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="name" translate>Reporting Manager</label>
+                  <div class="input-group">
+                    <select class="custom-select" id="pname" formControlName="selectedmanager">
+                      <option selected value="">Choose..</option>
+                      <option>Test User</option>
+                      <option>Real User</option>
+                      <option>Others User</option>
+                    </select>
+                  </div>
+                  <small
+                    [hidden]="form.selectedmanager.valid || form.selectedmanager.untouched"
+                    class="text-danger"
+                    translate
+                  >
+                    <div *ngIf="form.selectedmanager.errors.required" translate>Please select reporting manager.</div>
+                    <div *ngIf="form.selectedmanager.errors.maxlength" translate>
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="name" translate>Team</label>
+                  <div class="input-group">
+                    <select class="custom-select" id="pname" formControlName="selectedteam">
+                      <option selected value="">Choose..</option>
+                      <option>1st team</option>
+                      <option>2nd Team</option>
+                      <option>3rd Team</option>
+                    </select>
+                  </div>
+                  <small
+                    [hidden]="form.selectedteam.valid || form.selectedteam.untouched"
+                    class="text-danger"
+                    translate
+                  >
+                    <div *ngIf="form.selectedteam.errors.required" translate>Please select team.</div>
+                    <div *ngIf="form.selectedteam.errors.maxlength" translate>
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="name" translate>Data Access</label>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input
+                      id="Hirarchical"
+                      type="radio"
+                      class="custom-control-input"
+                      value="Hirarchical"
+                      name="dataaccess"
+                      formControlName="dataaccess"
+                    />
+                    <label class="custom-control-label" for="Hirarchical">Hirarchical</label>
+                  </div>
+
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input
+                      id="Global"
+                      type="radio"
+                      class="custom-control-input"
+                      value="Global"
+                      name="dataaccess"
+                      formControlName="dataaccess"
+                    />
+                    <label class="custom-control-label" for="Global">Global</label>
+                  </div>
+
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input
+                      id="Custom"
+                      type="radio"
+                      class="custom-control-input"
+                      value="Custom"
+                      name="dataaccess"
+                      formControlName="dataaccess"
+                    />
+                    <label class="custom-control-label" for="Custom">Custom</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <div class="input-group">
+                    <select class="custom-select" id="pname" formControlName="selectedaccess1">
+                      <option selected value="">Choose..</option>
+                      <option>1st team</option>
+                      <option>2nd Team</option>
+                      <option>3rd Team</option>
+                    </select>
+                  </div>
+                  <small
+                    [hidden]="form.selectedaccess1.valid || form.selectedaccess1.untouched"
+                    class="text-danger"
+                    translate
+                  >
+                    <div *ngIf="form.selectedaccess1.errors.required" translate>Please select</div>
+                    <div *ngIf="form.selectedaccess1.errors.maxlength" translate>
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <div class="input-group">
+                    <select class="custom-select" id="pname" formControlName="selectedaccess2">
+                      <option selected value="">Choose..</option>
+                      <option>1st team</option>
+                      <option>2nd Team</option>
+                      <option>3rd Team</option>
+                    </select>
+                  </div>
+                  <small
+                    [hidden]="form.selectedaccess2.valid || form.selectedaccess2.untouched"
+                    class="text-danger"
+                    translate
+                  >
+                    <div *ngIf="form.selectedaccess2.errors.required" translate>Please select</div>
+                    <div *ngIf="form.selectedaccess2.errors.maxlength" translate>
+                      <span translate>characters</span>
+                    </div>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- body ends here -->
+
+        <div class="footer text-right">
+          <input type="button" class="btn btn-cancel mr-2" value="Cancel" />
+          <input type="button" class="btn btn-submit" value="Create" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <!-- Button trigger modal -->
+</div>

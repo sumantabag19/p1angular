@@ -1,0 +1,43 @@
+<div class="login-container">
+  <div class="login-box">
+    <div class="container">
+      <div class="card mx-auto login-card">
+        <div class="card-img text-center">
+          <img class="d-block mx-auto mb-2 logo" src="assets/EvA-logo.png" alt="angular logo" />
+          <h4 class="card-title text-center" translate>Verify_Otp_Header</h4>
+          <p translate>Verify_Otp_Subtitle</p>
+        </div>
+        <div class="card-body login-card-body">
+          <form [formGroup]="form" novalidate>
+            <div class="alert alert-danger" [hidden]="!error || isLoading" translate>Invalid_Otp.</div>
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <input type="email" class="form-control" id="input1" formControlName="digit1" />
+              </div>
+              <div class="form-group col-md-2">
+                <input type="password" class="form-control" id="input2" formControlName="digit2" />
+              </div>
+              <div class="form-group col-md-2">
+                <input type="email" class="form-control" id="input3" formControlName="digit3" />
+              </div>
+              <div class="form-group col-md-2">
+                <input type="password" class="form-control" id="input4" formControlName="digit4" />
+              </div>
+              <div class="form-group col-md-2">
+                <input type="email" class="form-control" id="input5" formControlName="digit5" />
+              </div>
+              <div class="form-group col-md-2">
+                <input type="password" class="form-control" id="input6" formControlName="digit6" />
+              </div>
+            </div>
+            <p class="p-login" translate>Didn't receive? <a href="#" translate>Resend OTP</a></p>
+            <button class="btn w-100" type="submit" [disabled]="form.invalid || isLoading">
+              <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+              <span translate>Verify & login</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

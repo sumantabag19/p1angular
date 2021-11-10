@@ -1,0 +1,698 @@
+<div class="col-12 mt-2">
+  <div class="row">
+    <div class="col-lg col-md col-sm pr-lg-0 pr-md-0 pr-sm-0">
+      <div class="card task-summary">
+        <div class="header">
+          <span class="title">My Tasks</span>
+          <span class="count">50</span>
+        </div>
+        <div class="body pb-0">
+          <div class="row">
+            <div class="col-lg col-md-12 col-sm-12 pr-lg-0">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/due.png" alt="" />
+                <div class="w-100">
+                  <h5>20</h5>
+                  <span>Due Tasks</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-md-12 col-sm-12 pr-lg-0">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/today.png" alt="" />
+                <div class="w-100">
+                  <h5>5</h5>
+                  <span>Today's Tasks</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-md-12 col-sm-12">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/future.png" alt="" />
+                <div class="w-100">
+                  <h5>25</h5>
+                  <span>Future Tasks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg col-md col-sm">
+      <div class="card task-summary">
+        <div class="header">
+          <span class="title">Associated Employees Tasks</span>
+          <span class="count">250</span>
+        </div>
+        <div class="body pb-0">
+          <div class="row">
+            <div class="col-lg col-md-12 col-sm-12 pr-lg-0">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/due.png" alt="" />
+                <div class="w-100">
+                  <h5>50</h5>
+                  <span>Due Tasks</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-md-12 col-sm-12 pr-lg-0">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/today.png" alt="" />
+                <div class="w-100">
+                  <h5>100</h5>
+                  <span>Today's Tasks</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-md-12 col-sm-12">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/future.png" alt="" />
+                <div class="w-100">
+                  <h5>150</h5>
+                  <span>Future Tasks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg col-md col-sm d-none">
+      <div class="card task-summary">
+        <div class="header">
+          <span class="title">Opportunities</span>
+        </div>
+        <div class="body pb-0">
+          <div class="row">
+            <div class="col-lg col-md-12 col-sm-12 pr-lg-0">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/opportunity.png" alt="" />
+                <div class="w-100">
+                  <h5>50</h5>
+                  <span>Opportunities</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-md-12 col-sm-12">
+              <div class="summary mb-10">
+                <img src="../../assets/imgs/task/value.png" alt="" />
+                <div class="w-100">
+                  <h5><i class="fas fa-rupee" style="font-size: 16px"></i> 1500.35</h5>
+                  <span>Value</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="card">
+    <div class="input-group search-grp">
+      <input type="text" class="form-control" placeholder="Search tasks" />
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
+
+    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="pills-mytasks-tab" data-toggle="pill" href="#pills-mytasks" role="tab"
+          >My Tasks</a
+        >
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-emptasks-tab" data-toggle="pill" href="#pills-emptasks" role="tab"
+          >Employee Tasks</a
+        >
+      </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      <!-- my tasks -->
+      <div class="tab-pane fade show active" id="pills-mytasks" role="tabpanel">
+        <div class="card filters mb-0" style="box-shadow: none">
+          <div class="inner-bottom">
+            <div class="row">
+              <div class="col-lg-auto col-md-8 pr-0">
+                <div class="row">
+                  <div class="col-auto">
+                    <label>Date Range</label>
+                  </div>
+                  <div class="col pl-0 text-icon">
+                    <input type="text" class="form-control" placeholder="From" />
+                    <span class="fas fa-calendar-alt icon-label" style="top: 10px; right: 26px"></span>
+                  </div>
+                  <div class="col pl-0 text-icon">
+                    <input type="text" class="form-control" placeholder="To" />
+                    <span class="fas fa-calendar-alt icon-label" style="top: 10px; right: 26px"></span>
+                  </div>
+                  <div class="col pl-0">
+                    <input type="button" class="btn btn-eva mr-2" value="Apply" />
+                    <input type="button" class="btn btn-reset" value="Reset" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg col-md-4">
+                <div class="row justify-content-end">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <select class="form-control">
+                      <option>Type</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 pl-0">
+                    <select class="form-control">
+                      <option>Duration</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Contact Name</th>
+              <th>created by</th>
+              <th>created on</th>
+              <th>SCHEDULED ON</th>
+              <th>TYPE</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>New building found</td>
+              <td></td>
+              <td>Gourav Singhal</td>
+              <td>10-11-2020 10:30AM</td>
+              <td>10-12-2020 10:30AM</td>
+              <td>Research</td>
+              <td class="dropdown text-right">
+                <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlTaskDetails">
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlDelegateTask">
+                    <i class="fas fa-user-plus"></i>
+                    Delegate To
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlReschedTask">
+                    <i class="fas fa-clock"></i>
+                    Reschedule
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-check"></i>
+                    Complete
+                  </a>
+                  <a class="dropdown-item" routerLink="../task/task-history">
+                    <i class="fas fa-history"></i>
+                    History
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Visakha Enclave-Saheed Nagar</td>
+              <td>Harihar Sharma</td>
+              <td>Gourav Singhal</td>
+              <td>10-11-2020 10:30AM</td>
+              <td>10-12-2020 10:30AM</td>
+              <td>Call</td>
+              <td class="dropdown text-right">
+                <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlTaskDetails">
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlDelegateTask">
+                    <i class="fas fa-user-plus"></i>
+                    Delegate To
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlReschedTask">
+                    <i class="fas fa-clock"></i>
+                    Reschedule
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-check"></i>
+                    Complete
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" routerLink="../task/task-history">
+                    <i class="fas fa-history"></i>
+                    History
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Visakha Enclave-Saheed Nagar</td>
+              <td>Harihar Sharma</td>
+              <td>Gourav Singhal</td>
+              <td>10-11-2020 10:30AM</td>
+              <td>10-12-2020 10:30AM</td>
+              <td>Meeting</td>
+              <td class="dropdown text-right">
+                <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlTaskDetails">
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlDelegateTask">
+                    <i class="fas fa-user-plus"></i>
+                    Delegate To
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlReschedTask">
+                    <i class="fas fa-clock"></i>
+                    Reschedule
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-check"></i>
+                    Complete
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" routerLink="../task/task-history">
+                    <i class="fas fa-history"></i>
+                    History
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Visakha Enclave-Saheed Nagar</td>
+              <td>Harihar Sharma</td>
+              <td>Gourav Singhal</td>
+              <td>10-11-2020 10:30AM</td>
+              <td>10-12-2020 10:30AM</td>
+              <td>Mail</td>
+              <td class="dropdown text-right">
+                <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlTaskDetails">
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlDelegateTask">
+                    <i class="fas fa-user-plus"></i>
+                    Delegate To
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlReschedTask">
+                    <i class="fas fa-clock"></i>
+                    Reschedule
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-check"></i>
+                    Complete
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" routerLink="../task/task-history">
+                    <i class="fas fa-history"></i>
+                    History
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- my tasks -->
+
+      <!-- employee tasks -->
+      <div class="tab-pane fade" id="pills-emptasks" role="tabpanel">
+        <div class="card filters mb-0" style="box-shadow: none">
+          <div class="inner-bottom">
+            <div class="row">
+              <div class="col-lg-auto col-md-8 pr-0">
+                <div class="row">
+                  <div class="col-auto">
+                    <label>Date Range</label>
+                  </div>
+                  <div class="col pl-0 text-icon">
+                    <input type="text" class="form-control" placeholder="From" />
+                    <span class="fas fa-calendar-alt icon-label" style="top: 10px; right: 26px"></span>
+                  </div>
+                  <div class="col pl-0 text-icon">
+                    <input type="text" class="form-control" placeholder="To" />
+                    <span class="fas fa-calendar-alt icon-label" style="top: 10px; right: 26px"></span>
+                  </div>
+                  <div class="col pl-0">
+                    <input type="button" class="btn btn-eva mr-2" value="Apply" />
+                    <input type="button" class="btn btn-reset" value="Reset" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg col-md-4">
+                <div class="row justify-content-end">
+                  <div class="col-lg-5 col-md-4 col-sm-4 pr-0">
+                    <select class="form-control">
+                      <option>Select Employee</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-4">
+                    <select class="form-control">
+                      <option>Type</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-4 pl-0">
+                    <select class="form-control">
+                      <option>Duration</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>related to</th>
+              <th>created by</th>
+              <th>DELEGATED TO</th>
+              <th>created on</th>
+              <th>SCHEDULED ON</th>
+              <th>TYPE</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>New building found</td>
+              <td></td>
+              <td>Gourav Singhal</td>
+              <td>Rabindra Sharma</td>
+              <td>10-11-2020 10:30AM</td>
+              <td>10-12-2020 10:30AM</td>
+              <td>Research</td>
+              <td class="dropdown text-right">
+                <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlTaskDetails">
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlDelegateTask">
+                    <i class="fas fa-user-plus"></i>
+                    Delegate To
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlReschedTask">
+                    <i class="fas fa-clock"></i>
+                    Reschedule
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-check"></i>
+                    Complete
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" routerLink="../task/task-history">
+                    <i class="fas fa-history"></i>
+                    History
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>New building found</td>
+              <td>Harihar Sharma</td>
+              <td>Gourav Singhal</td>
+              <td>Rabindra Sharma</td>
+              <td>10-11-2020 10:30AM</td>
+              <td>10-12-2020 10:30AM</td>
+              <td>Call</td>
+              <td class="dropdown text-right">
+                <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlTaskDetails">
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlDelegateTask">
+                    <i class="fas fa-user-plus"></i>
+                    Delegate To
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlReschedTask">
+                    <i class="fas fa-clock"></i>
+                    Reschedule
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-check"></i>
+                    Complete
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" routerLink="../task/task-history">
+                    <i class="fas fa-history"></i>
+                    History
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>New building found</td>
+              <td>Harihar Sharma</td>
+              <td>Gourav Singhal</td>
+              <td>Rabindra Sharma</td>
+              <td>10-11-2020 10:30AM</td>
+              <td>10-12-2020 10:30AM</td>
+              <td>Whatsapp</td>
+              <td class="dropdown text-right">
+                <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlTaskDetails">
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlDelegateTask">
+                    <i class="fas fa-user-plus"></i>
+                    Delegate To
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#mdlReschedTask">
+                    <i class="fas fa-clock"></i>
+                    Reschedule
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-check"></i>
+                    Complete
+                  </a>
+                  <a class="dropdown-item" href="javascript:;" routerLink="../task/task-history">
+                    <i class="fas fa-history"></i>
+                    History
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- employee tasks -->
+    </div>
+  </div>
+</div>
+
+<!-- Task Details Modal -->
+<div class="modal fade" id="mdlTaskDetails" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Task Details</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body task-details">
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Title</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">New building found</div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Description</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Contact Name</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">Harihar Sharma</div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Created By</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">Gourav Singhal</div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Deligated To</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">Rabindra Sharma</div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Created On</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">10-11-2020 10:30AM</div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Scheduled On</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">10-12-2020 10:30AM</div>
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Type</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8">Research</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delegate Task Modal -->
+<div class="modal fade" id="mdlDelegateTask" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 370px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delegate Task</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body task-details">
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Title</label>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">New building found</div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Curr. Deligated To</label>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">Rabindra Sharma</div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label>Deligate To</label>
+          <select class="form-control">
+            <option>Select Employee</option>
+          </select>
+        </div>
+        <div class="text-center mb-1">
+          <input type="button" class="btn btn-eva" value="Deligate" style="width: 160px" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reschedule Task Modal -->
+<div class="modal fade" id="mdlReschedTask" tabindex="-1">
+  <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reschedule Task</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body task-details">
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Title</label>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">New building found</div>
+          </div>
+        </div>
+        <div class="mb-10">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 pr-lg-0 pr-md-0 pr-sm-0">
+              <label>Scheduled On</label>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">10-11-2020 10:30AM</div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label>Reschedule To</label>
+          <div class="row">
+            <div class="col pr-0 text-icon">
+              <input type="text" class="form-control" placeholder="dd-mm-yyyy" />
+              <span class="fas fa-calendar-alt icon-label" style="top: 10px"></span>
+            </div>
+            <div class="col text-icon">
+              <input type="text" class="form-control" />
+              <span class="fas fa-clock icon-label" style="top: 10px; right: 24px"></span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mb-1">
+          <input type="button" class="btn btn-eva" value="Apply" style="width: 160px" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

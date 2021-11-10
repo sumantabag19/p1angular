@@ -1,0 +1,124 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{ title }}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="name">Business Unit Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Business Unit Name"
+          formControlName="buName"
+          [ngClass]="{ 'is-invalid': f.buName.touched && f.buName.errors }"
+        />
+        <div *ngIf="f.buName.touched && f.buName.errors" class="invalid-feedback">
+          <div *ngIf="f.buName.errors.required">Business unit name is required</div>
+          <div *ngIf="f.buName.errors.maxLength">
+            Business unit name should contain max {{ f.buName.errors.maxLength.requiredLength }} characters
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="pname">Parent BU Name</label>
+        <select
+          class="custom-select"
+          id="pname"
+          formControlName="parentBuId"
+          [ngClass]="{ 'is-invalid': f.parentBuId.touched && f.parentBuId.errors }"
+        >
+          <option selected value="">Choose..</option>
+          <option *ngFor="let item of list" [value]="item.id">
+            {{ item.value }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          placeholder="Email"
+          formControlName="emailId"
+          [ngClass]="{ 'is-invalid': f.emailId.touched && f.emailId.errors }"
+        />
+        <div *ngIf="f.emailId.touched && f.emailId.errors" class="invalid-feedback">
+          <div *ngIf="f.emailId.errors.required">Email is required</div>
+          <div *ngIf="f.emailId.errors.email">Invalid email address</div>
+          <div *ngIf="f.emailId.errors.maxLength">
+            Email should contain max {{ f.emailId.errors.maxLength.requiredLength }} characters
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="website">Website</label>
+        <input
+          type="text"
+          class="form-control"
+          id="website"
+          placeholder="Website"
+          formControlName="website"
+          [ngClass]="{ 'is-invalid': f.website.touched && f.website.errors }"
+        />
+        <div *ngIf="f.website.touched && f.website.errors" class="invalid-feedback">
+          <div *ngIf="f.website.errors.pattern">Invalid Website URL</div>
+          <div *ngIf="f.website.errors.maxLength">
+            Website should contain max {{ f.website.errors.maxLength.requiredLength }} characters
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="buAlias1">Alias 1</label>
+        <input
+          type="text"
+          class="form-control"
+          id="buAlias1"
+          placeholder="Alias 1"
+          formControlName="buAlias1"
+          [ngClass]="{ 'is-invalid': f.buAlias1.touched && f.buAlias1.errors }"
+        />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="website">Alias 2</label>
+        <input
+          type="text"
+          class="form-control"
+          id="buAlias2"
+          placeholder="Alias 2"
+          formControlName="buAlias2"
+          [ngClass]="{ 'is-invalid': f.buAlias2.touched && f.buAlias2.errors }"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="buAlias3">Alias 3</label>
+        <input
+          type="text"
+          class="form-control"
+          id="buAlias3"
+          placeholder="Alias 3"
+          formControlName="buAlias3"
+          [ngClass]="{ 'is-invalid': f.buAlias3.touched && f.buAlias3.errors }"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" type="submit" [disabled]="editForm.invalid || isLoading">
+      <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+      <span translate>Save Business Unit</span>
+    </button>
+    <button type="button" class="btn btn-default" (click)="onReset()">{{ closeBtnName }}</button>
+  </div>
+</form>

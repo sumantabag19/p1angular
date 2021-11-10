@@ -1,0 +1,35 @@
+// .imgCls {
+//   width: 100px;
+// }
+
+.team-members {
+  padding-right: 27px !important;
+  padding-bottom: 0 !important;
+}
+
+.team-members .team-member {
+  display: flex;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.team-members .team-member img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  top: 5px;
+}
+
+.team-members .team-member .card {
+  width: 100%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  padding: 8px 12px 6px 12px;
+  margin-bottom: 0;
+}
+
+.team-members .team-member .card h5 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}

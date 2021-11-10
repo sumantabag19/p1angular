@@ -1,0 +1,282 @@
+<div class="list-view w-100">
+  <div class="col-12">
+    <div class="card filters">
+      <div class="inner-top pb-0">
+        <div class="row">
+          <div class="col-lg-auto col-md-auto col-sm-auto mb-10">
+            <span class="page-title">Opportunity (3)</span>
+          </div>
+          <div class="col-lg col-md col-sm">
+            <div class="row justify-content-end">
+              <div class="col-lg-4 col-md-5 pr-lg-0 mb-10">
+                <div class="input-group search-grp">
+                  <input type="text" class="form-control" placeholder="Search Opportunity" />
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto pr-lg-0 pr-sm-0 mb-10">
+                <div class="dropdown">
+                  <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                    List View
+                  </a>
+
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="javascript:;" (click)="getfunnelview()">
+                      <i
+                        class="fas fa-bars"
+                        style="transform: rotate(90deg); line-height: 0; position: relative; top: 6px; left: -7px"
+                      ></i>
+                      Funnel View
+                    </a>
+                    <!-- <a class="dropdown-item" href="#">
+                                            <i class="fas fa-bars"></i>
+                                            List View
+                                        </a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto mb-10">
+                <input type="button" class="btn btn-eva mr-2" value="Edit Columns" />
+                <input type="button" class="btn btn-secondary" value="Add Column" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" /></th>
+            <th>Opportunity NAME</th>
+            <th>ACCOUNT NAME</th>
+            <th>Deal Value</th>
+            <th>DEAL STAGE</th>
+            <th>EXPECTED CLOSE</th>
+            <th>OWNER</th>
+            <th>LAST Contacted</th>
+            <th class="text-center">Touchpoints</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="min-width: 30px; width: 30px; max-width: 30px">
+              <input type="checkbox" />
+            </td>
+            <td><a href="javascript:void(0)" (click)="getopportunitydetail()" class="text-eva">Debasish Mohanty</a></td>
+            <td>A1 Industry</td>
+            <td><i class="fas fa-rupee" style="font-size: 12px"></i> 20,000</td>
+            <td>Opportunity</td>
+            <td>Follow Up</td>
+            <td>NA</td>
+            <td>Somnath Sathpathy</td>
+            <td class="text-center">50</td>
+            <td class="text-right">
+              <span
+                class="fas fa-history c-pointer"
+                data-toggle="modal"
+                data-target="#mdlOpportunityHistory"
+                style="color: #707070"
+              ></span>
+            </td>
+            <td class="dropdown text-right">
+              <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-file"></i>
+                  Add Log
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-tasks"></i>
+                  Add Task
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-people-arrows"></i>
+                  Transfer Opportunity
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-file-medical"></i>
+                  Add Documents
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-trash-alt"></i>
+                  Delete
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="min-width: 30px; width: 30px; max-width: 30px">
+              <input type="checkbox" />
+            </td>
+            <td><a href="javascript:void(0)" (click)="getopportunitydetail()" class="text-eva">Debasish Mohanty</a></td>
+            <td>A1 Industry</td>
+            <td><i class="fas fa-rupee" style="font-size: 12px"></i> 20,000</td>
+            <td>Opportunity</td>
+            <td>Follow Up</td>
+            <td>NA</td>
+            <td>Somnath Sathpathy</td>
+            <td class="text-center">50</td>
+            <td class="text-right">
+              <span
+                class="fas fa-history c-pointer"
+                data-toggle="modal"
+                data-target="#mdlOpportunityHistory"
+                style="color: #707070"
+              ></span>
+            </td>
+            <td class="dropdown text-right">
+              <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-file"></i>
+                  Add Log
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-tasks"></i>
+                  Add Task
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-people-arrows"></i>
+                  Transfer Opportunity
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-file-medical"></i>
+                  Add Documents
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-trash-alt"></i>
+                  Delete
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="min-width: 30px; width: 30px; max-width: 30px">
+              <input type="checkbox" />
+            </td>
+            <td><a href="javascript:void(0)" (click)="getopportunitydetail()" class="text-eva">Debasish Mohanty</a></td>
+            <td>A1 Industry</td>
+            <td><i class="fas fa-rupee" style="font-size: 12px"></i> 20,000</td>
+            <td>Opportunity</td>
+            <td>Follow Up</td>
+            <td>NA</td>
+            <td>Somnath Sathpathy</td>
+            <td class="text-center">50</td>
+            <td class="text-right">
+              <span
+                class="fas fa-history c-pointer"
+                data-toggle="modal"
+                data-target="#mdlOpportunityHistory"
+                style="color: #707070"
+              ></span>
+            </td>
+            <td class="dropdown text-right">
+              <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-file"></i>
+                  Add Log
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-tasks"></i>
+                  Add Task
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-people-arrows"></i>
+                  Transfer Opportunity
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-file-medical"></i>
+                  Add Documents
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                  <i class="fas fa-trash-alt"></i>
+                  Delete
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Opportunity History Modal -->
+<div class="modal fade" id="mdlOpportunityHistory" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 450px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Opportunity History</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body opp-history">
+        <div class="timeline">
+          <span class="img">
+            <img src="../../../../assets/images/dollar-symbol.png" alt="" />
+          </span>
+          <div class="w-100">
+            <span class="d-block">Date: 11.02.2020 11:10AM</span>
+            <span>Opportunity created successfully.</span>
+          </div>
+        </div>
+        <div class="timeline">
+          <span class="img">
+            <img src="../../../../assets/images/followup.png" alt="" />
+          </span>
+          <div class="w-100">
+            <span class="d-block">Date: 16.02.2020 03:18PM</span>
+            <span>Opportunity stage changed to <b>Follow-up</b>.</span>
+          </div>
+        </div>
+        <div class="timeline">
+          <span class="img">
+            <img src="../../../../assets/images/review.png" alt="" />
+          </span>
+          <div class="w-100">
+            <span class="d-block">Date: 21.02.2020 05:15PM</span>
+            <span>Opportunity stage changed to <b>Review</b>.</span>
+          </div>
+        </div>
+        <div class="timeline">
+          <span class="img">
+            <img src="../../../../assets/images/demo.png" alt="" />
+          </span>
+          <div class="w-100">
+            <span class="d-block">Date: 23.02.2020 12:20PM</span>
+            <span>Opportunity stage changed to <b>Demo</b>.</span>
+          </div>
+        </div>
+        <div class="timeline">
+          <span class="img">
+            <img src="../../../../assets/images/negotiation.png" alt="" />
+          </span>
+          <div class="w-100">
+            <span class="d-block">Date: 25.02.2020 02:20PM</span>
+            <span>Opportunity stage changed to <b>Negotiation</b>.</span>
+          </div>
+        </div>
+        <div class="timeline">
+          <span class="img">
+            <img src="../../../../assets/images/money-bag.png" alt="" />
+          </span>
+          <div class="w-100">
+            <span class="d-block">Date: 26.02.2020 04:40PM</span>
+            <span>Opportunity stage changed to <b>Payment</b>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

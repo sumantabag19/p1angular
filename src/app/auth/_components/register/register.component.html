@@ -1,0 +1,187 @@
+<div class="register-container">
+  <div class="register-box container-fluid">
+    <div class="row main">
+      <div class="col-md-4 left-box">
+        <div class="banner">
+          <img src="/assets/EvA-logo.png" alt="logo" />
+          <h1 translate>Register_Header_Left</h1>
+        </div>
+      </div>
+      <div class="col-md-8 right-box">
+        <div class="register-form">
+          <h2 class="form-header" translate>Register_Header_Right</h2>
+          <form (ngSubmit)="register()" [formGroup]="registerForm" novalidate>
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="name" translate>Name</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="name" formControlName="name" />
+                  <img src="/assets/auth/Name.png" alt="name" />
+                </div>
+                <small [hidden]="form.name.valid || form.name.untouched" class="text-danger" translate>
+                  <div *ngIf="form.name.errors.required" translate>Name_Required</div>
+                  <div *ngIf="form.name.errors.maxlength" translate>
+                    <span translate>Name should contain max</span> {{ form.name.errors.maxlength.requiredLength }}
+                    <span translate>characters</span>
+                  </div>
+                </small>
+              </div>
+              <div class="col-md-6">
+                <label for="email" translate>Email</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="email" formControlName="email" />
+                  <img src="/assets/auth/Email.png" alt="email" />
+                </div>
+                <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                  <div *ngIf="form.email.errors?.required" translate>Email_Required</div>
+                  <div *ngIf="form.email.errors?.email" translate>Invalid_Email</div>
+                  <div *ngIf="form.email.errors?.maxlength">
+                    <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                    <span translate>characters</span>
+                  </div>
+                </small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="mobile" translate>Mobile</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="mobile" formControlName="mobile" />
+                  <img src="/assets/auth/Mobile.png" alt="mobile" />
+                </div>
+                <small [hidden]="form.mobile.valid || form.mobile.untouched" class="text-danger" translate>
+                  <div *ngIf="form.mobile.errors?.required" translate>Mobile_Required</div>
+                  <div *ngIf="form.mobile.errors?.pattern" translate>Invalid_Mobile</div>
+                </small>
+              </div>
+              <div class="col-md-6">
+                <label for="organisationName" translate>Organization Name</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="organisationName" formControlName="organizationName" />
+                  <img src="/assets/auth/Organization Name.png" alt="organization" />
+                </div>
+                <small
+                  [hidden]="form.organizationName.valid || form.organizationName.untouched"
+                  class="text-danger"
+                  translate
+                >
+                  Organization_Required
+                </small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="loginId" translate>Login Id</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="loginId" formControlName="loginId" />
+                  <img src="/assets/auth/Log in ID.png" alt="loginId" />
+                </div>
+                <small [hidden]="form.loginId.valid || form.loginId.untouched" class="text-danger" translate>
+                  <div *ngIf="form.loginId.errors?.required" translate>LoginId_Required</div>
+                  <div *ngIf="form.loginId.errors?.minlength" translate>
+                    <span translate>Login id must be atleast</span> {{ form.loginId.errors?.minlength.requiredLength }}
+                    <span translate>char(s) long</span>
+                  </div>
+                </small>
+              </div>
+              <div class="col-md-3">
+                <label for="city" translate>City</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="city" formControlName="city" />
+                  <img src="/assets/auth/City.png" alt="city" />
+                </div>
+                <small [hidden]="form.city.valid || form.city.untouched" class="text-danger" translate>
+                  City_Required
+                </small>
+              </div>
+              <div class="col-md-3">
+                <label for="zip" translate>Zip</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="zip" formControlName="zip" />
+                  <img src="/assets/auth/zip-code.png" alt="zip" />
+                </div>
+                <small [hidden]="form.zip.valid || form.zip.untouched" class="text-danger" translate>
+                  <div *ngIf="form.zip.errors?.required" translate>Zip_Required</div>
+                  <div *ngIf="form.zip.errors?.pattern" translate>Invalid_Zip</div>
+                </small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="state" translate>State</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="state" formControlName="state" />
+                  <img src="/assets/auth/state.png" alt="state" />
+                </div>
+                <small [hidden]="form.state.valid || form.state.untouched" class="text-danger" translate>
+                  State_Required
+                </small>
+              </div>
+              <div class="col-md-6">
+                <label for="country" translate>Country</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="country" formControlName="country" />
+                  <img src="/assets/auth/country.png" alt="country" />
+                </div>
+                <small [hidden]="form.country.valid || form.country.untouched" class="text-danger" translate>
+                  Country_Required
+                </small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="password" translate>Password</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="password" formControlName="password" />
+                  <img src="/assets/auth/Password.png" alt="password" />
+                </div>
+                <small [hidden]="form.password.valid || form.password.untouched" class="text-danger" translate>
+                  <div *ngIf="form.password.errors?.required" translate>Password_Required</div>
+                  <div *ngIf="form.password.errors?.pattern" translate>Password_Policy</div>
+                </small>
+              </div>
+              <div class="col-md-6">
+                <label for="confirmPassword" translate>Confirm Password</label>
+                <div class="input-group mb-2">
+                  <input type="text" class="form-control" id="confirmPassword" formControlName="confirmPassword" />
+                  <img src="/assets/auth/Password.png" alt="password" />
+                </div>
+                <small
+                  [hidden]="form.confirmPassword.valid || form.confirmPassword.untouched"
+                  class="text-danger"
+                  translate
+                >
+                  Confirm_Required
+                </small>
+
+                <small
+                  class="text-danger"
+                  translate
+                  *ngIf="form.confirmPassword.valid && registerForm.errors?.notMatch"
+                >
+                  Password_Match_Error
+                </small>
+
+                <!-- <p>{{ registerForm.errors | json }}</p> -->
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <button class="btn w-100" type="submit" [disabled]="registerForm.invalid || isLoading">
+                  <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+                  <i class="fas fa-user-alt" [hidden]="isLoading"></i>
+                  <span translate>Create</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="sidebar-wrapper">
+  <ng-sidebar-container>
+    <ng-sidebar [(opened)]="opened" [mode]="MODES[modeNum]" [position]="POSITIONS[positionNum]">
+      <app-nav-bar></app-nav-bar>
+    </ng-sidebar>
+    <ng-sidebar
+      [(opened)]="_opened"
+      [mode]="_MODES[_modeNum]"
+      [position]="_POSITIONS[_positionNum]"
+      [closeOnClickOutside]="_closeOnClickOutside"
+      [closeOnClickBackdrop]="_closeOnClickBackdrop"
+      [showBackdrop]="_showBackdrop"
+    >
+      <app-component-host [mode]="mode"></app-component-host>
+    </ng-sidebar>
+    <div ng-sidebar-content>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-white bg-white">
+          <a>
+            <i class="fas fa-caret-down"></i>
+          </a>
+          <input type="text" class="form-control margin" placeholder="Search by contact, account, opportunity" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-controls="navbar-menu"
+            aria-label="Toggle navigation"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="!menuHidden"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
+            <div class="navbar-nav ml-auto">
+              <a href="javascript:void(0)" (click)="openAddMenu()">
+                <div class="plus_circle">+</div>
+              </a>
+              <a href="javascript:void(0)"> <i class="fas fa-bell"></i><span class="numbell">2+</span> </a>
+              <a href="javascript:void(0)" (click)="_toggleOpened('app')" ng-sidebar-content
+                ><i class="fas fa-th"></i
+              ></a>
+              <a href="javascript:void(0)">
+                <div class="name_circle">S</div>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <router-outlet></router-outlet>
+    </div>
+  </ng-sidebar-container>
+</div>

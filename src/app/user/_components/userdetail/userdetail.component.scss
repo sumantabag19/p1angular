@@ -1,0 +1,460 @@
+.jumbotron {
+  padding: 1rem 2rem;
+}
+
+img.img-setting {
+  width: 36px;
+}
+
+.settings-section {
+  padding-bottom: 12px;
+}
+
+.settings-inner-section {
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.settings-sub-section {
+  padding-left: 0;
+}
+
+.settings-text-header {
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.settings-text-sub-header {
+  font-size: 14px;
+}
+
+.settings-text-info {
+  font-size: 12px;
+}
+
+.settings-box {
+  border: 2px dashed #e5e5e5;
+  border-radius: 12px;
+  margin: 5px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  min-height: 80px;
+}
+
+.settings-box span {
+  color: #8a8888;
+}
+thead {
+  background: #e5e5e5;
+}
+.col-sm-12 {
+  font-size: 14px;
+}
+button#lnkbtn {
+  background: #e5e5e5;
+  color: black;
+}
+
+.slide-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1111;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-form.show-me {
+  transform: translateX(0);
+}
+
+.slide-form.hide-me {
+  transform: translateX(150%);
+}
+
+.slide-form .form-widget {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 485px;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.slide-form .form-widget .header {
+  width: 100%;
+  padding: 7px 12px 8px 12px;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.slide-form .form-widget .header h4 {
+  font-size: 20px;
+  margin: 0;
+  display: inline-block;
+}
+
+.slide-form .form-widget .header span.close {
+  position: absolute;
+  font-size: 24px;
+  line-height: 1;
+  right: 8px;
+  top: 8px;
+  color: #949494;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.slide-form .form-widget .body {
+  width: 100%;
+  height: calc(100vh - 95px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 7px 12px 8px 12px;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.slide-form .form-widget .footer {
+  width: 100%;
+  padding: 10px 12px 10px 12px;
+  position: relative;
+}
+
+// .btn {
+//   border: none;
+//   padding: 6px 25px;
+//   font-size: 14px;
+//   outline: none;
+//   transition: background 0.25s ease-in-out;
+// }
+
+// .btn.btn-cancel {
+//   background: #e5e5e5;
+//   color: #ffffff;
+// }
+
+// .btn.btn-cancel:hover {
+//   background: #d2d2d2;
+//   color: #ffffff;
+// }
+
+// .btn.btn-submit {
+//   background: #ea9531;
+//   color: #ffffff;
+// }
+
+// .btn.btn-submit:hover {
+//   background: #ca7e24;
+//   color: #ffffff;
+// }
+// td#sample {
+//   color: #ca7e24;
+// }
+
+.left-widget {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.left-widget img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.left-widget h4 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 2px;
+  padding-top: 5px;
+  color: #212121;
+  letter-spacing: 1px;
+}
+
+.left-widget span {
+  display: block;
+  font-size: 12px;
+  color: #707070;
+  letter-spacing: 1px;
+}
+
+.user-details {
+  width: 100%;
+}
+
+.user-details b {
+  font-family: "Nunito-Bold", sans-serif;
+}
+
+// h4 {
+//   font-size: x-large;
+// }
+
+// .card.bg-light.text-dark.top {
+//   margin-top: 33px;
+// }
+
+// p {
+//   font-size: 0.85rem;
+//   color: #565353;
+// }
+
+// .user-setting {
+//   position: relative;
+//   height: 100px;
+// }
+
+// .user-inside-setting {
+//   position: absolute;
+//   height: 67px;
+//   border: groove;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+// }
+// input#inputPassword2 {
+//   width: 20rem;
+// }
+// .card.bg-light.text-dark.top {
+//   border: none;
+// }
+// button.btn.add-user {
+//   background-color: #ea9531;
+//   color: #ffffff;
+// }
+
+.genealogy-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+.genealogy-scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #e4e4e4;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb {
+  background: #212121;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb:hover {
+  background: #d5b14c;
+  transition: 0.5s;
+}
+
+/*----------------genealogy-tree----------*/
+.genealogy-body {
+  white-space: nowrap;
+  overflow-y: hidden;
+  padding: 50px;
+  min-height: 500px;
+  padding-top: 10px;
+}
+.genealogy-tree ul {
+  padding-top: 20px;
+  position: relative;
+  padding-left: 0px;
+  display: flex;
+}
+.genealogy-tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+}
+.genealogy-tree li::before,
+.genealogy-tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #ccc;
+  width: 50%;
+  height: 18px;
+}
+.genealogy-tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #ccc;
+}
+.genealogy-tree li:only-child::after,
+.genealogy-tree li:only-child::before {
+  display: none;
+}
+.genealogy-tree li:only-child {
+  padding-top: 0;
+}
+.genealogy-tree li:first-child::before,
+.genealogy-tree li:last-child::after {
+  border: 0 none;
+}
+.genealogy-tree li:last-child::before {
+  border-right: 2px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.genealogy-tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+.genealogy-tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+.genealogy-tree li a {
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.genealogy-tree li a:hover + ul li::after,
+.genealogy-tree li a:hover + ul li::before,
+.genealogy-tree li a:hover + ul::before,
+.genealogy-tree li a:hover + ul ul::before {
+  border-color: #fbba00;
+}
+
+/*--------------memeber-card-design----------*/
+.member-view-box {
+  padding: 0px 20px;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+}
+.member-image {
+  width: 60px;
+  position: relative;
+}
+.member-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: #000;
+  z-index: 1;
+}
+button.btn.add-user {
+  background-color: #ea9531;
+  color: #ffffff;
+}
+
+.jumbotron {
+  height: 87vh;
+}
+
+input#searchText .form-control-sm {
+  height: calc(1.5em + 0.6rem + 2px) !important;
+}
+label.custom-control-label {
+  font-size: 12px;
+}
+.slide-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1111;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-form.show-me {
+  transform: translateX(0);
+}
+
+.slide-form.hide-me {
+  transform: translateX(150%);
+}
+
+.slide-form .form-widget {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 485px;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.slide-form .form-widget .header {
+  width: 100%;
+  padding: 7px 12px 8px 12px;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.slide-form .form-widget .header h4 {
+  font-size: 20px;
+  margin: 0;
+  display: inline-block;
+}
+
+.slide-form .form-widget .header span.close {
+  position: absolute;
+  font-size: 24px;
+  line-height: 1;
+  right: 8px;
+  top: 8px;
+  color: #949494;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.slide-form .form-widget .body {
+  width: 100%;
+  height: calc(100vh - 95px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 7px 12px 8px 12px;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.slide-form .form-widget .footer {
+  width: 100%;
+  padding: 10px 12px 10px 12px;
+  position: relative;
+}
+.btn {
+  border: none;
+  padding: 6px 25px;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.25s ease-in-out;
+}
+
+.btn.btn-cancel {
+  background: #e5e5e5;
+  color: #ffffff;
+}
+
+.btn.btn-cancel:hover {
+  background: #d2d2d2;
+  color: #ffffff;
+}
+
+.btn.btn-submit {
+  background: #ea9531;
+  color: #ffffff;
+}
+
+.btn.btn-submit:hover {
+  background: #ca7e24;
+  color: #ffffff;
+}

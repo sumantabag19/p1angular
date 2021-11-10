@@ -1,0 +1,110 @@
+@import "src/theme/theme";
+@import "src/theme/auth";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+.main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.register-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.register-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  min-height: 80%;
+  background-color: var(--quaternary);
+  border-radius: 25px;
+  border: 1px solid var(--shadow-border);
+  box-shadow: var(--shadow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-box {
+  position: relative;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+}
+
+.banner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  text-align: center;
+}
+
+.banner img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.right-box {
+  position: relative;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+}
+
+.register-form {
+  margin: 30px 75px 0px 0px;
+}
+
+.form-header {
+  color: var(--primary);
+  margin: 30px auto 20px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .left-box {
+    display: none;
+  }
+
+  .right-box {
+    width: 100%;
+    padding: 10px 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .register-form {
+    margin: 10px auto;
+  }
+
+  .form-header {
+    color: var(--primary);
+    margin: 10px auto;
+  }
+}

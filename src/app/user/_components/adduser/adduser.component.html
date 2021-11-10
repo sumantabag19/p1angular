@@ -1,0 +1,385 @@
+<div class="col-12 mt-2">
+  <div class="card filters">
+    <div class="inner-top">
+      <div class="row">
+        <div class="col-lg-auto col-md-auto col-sm-auto">
+          <span class="page-title">Admin Settings / User</span>
+        </div>
+        <div class="col-lg col-md col-sm">
+          <div class="row justify-content-end">
+            <div class="col-auto pr-0">
+              <select class="form-control" id="users">
+                <option value="0" selected>All User</option>
+                <option>Test User</option>
+                <option>Real User</option>
+                <option>Others User</option>
+              </select>
+            </div>
+            <div class="col col-lg-3 pr-0">
+              <div class="input-group search-grp">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="searchText"
+                  name="searchText"
+                  placeholder="Search account"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" style="font-size: 12px"><i class="fa fa-search"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button
+                class="btn btn-secondary btn-sm mr-2"
+                (click)="gethierarchy()"
+                data-toggle="modal"
+                data-target="#myModal"
+              >
+                User Hierarchy
+              </button>
+
+              <button type="button" class="btn add-user" (click)="flag = !flag">Add User</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="card">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>USER</th>
+          <th>EMAIL</th>
+          <th>MOBILE</th>
+          <th>REPORTING MANAGER</th>
+          <th>JOBTITLE</th>
+          <th class="text-center">SUBORDINATE</th>
+          <th>LAST LOGIN</th>
+          <th>STATUS</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="sample">
+            <a href="javascript:void(0)" (click)="getdetail(1)" class="c-pointer text-eva">Sumanta</a>
+          </td>
+          <td>sumantaeva@gmail.com</td>
+          <td>7008125167</td>
+          <td>Sumanta</td>
+          <td>Sales Executive</td>
+          <td class="text-center">0</td>
+
+          <td>N/A</td>
+          <td>Unregistered</td>
+          <td class="dropdown text-right">
+            <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fa fa-paper-plane"></i>
+                Send Invitation
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fa fa-lock"></i>
+                Reset Password
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-file-medical"></i>
+                Add Note
+              </a>
+
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-trash-alt"></i>
+                Delete
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="sample">
+            <a href="javascript:void(0)" (click)="getdetail(1)" class="c-pointer text-eva">Sumanta</a>
+          </td>
+          <td>sumantaeva@gmail.com</td>
+          <td>7008125167</td>
+          <td>Sumanta</td>
+          <td>Sales Executive</td>
+          <td class="text-center">0</td>
+
+          <td>N/A</td>
+          <td>
+            <span class="active-blocked">
+              <button type="button" class="btn btn-active active">Active</button>
+              <button type="button" id="lnkbtn" class="btn btn-blocked">Blocked</button>
+            </span>
+          </td>
+          <td class="dropdown text-right">
+            <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fa fa-paper-plane"></i>
+                Send Invitation
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fa fa-lock"></i>
+                Reset Password
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-file-medical"></i>
+                Add Note
+              </a>
+
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-trash-alt"></i>
+                Delete
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="sample">
+            <a href="javascript:void(0)" (click)="getdetail(1)" class="c-pointer text-eva">Sumanta</a>
+          </td>
+          <td>sumantaeva@gmail.com</td>
+          <td>7008125167</td>
+          <td>Sumanta</td>
+          <td>Sales Executive</td>
+          <td class="text-center">0</td>
+
+          <td>N/A</td>
+          <td>
+            <span class="active-blocked">
+              <button type="button" class="btn btn-active">Active</button>
+              <button type="button" id="lnkbtn" class="btn btn-blocked active">Blocked</button>
+            </span>
+          </td>
+          <td class="dropdown text-right">
+            <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fa fa-paper-plane"></i>
+                Send Invitation
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fa fa-lock"></i>
+                Reset Password
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-file-medical"></i>
+                Add Note
+              </a>
+
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-trash-alt"></i>
+                Delete
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div [ngClass]="flag ? 'slide-form hide-me' : 'slide-form show-me'">
+  <div class="form-widget">
+    <div class="header">
+      <h4>Add User</h4>
+      <span class="close" (click)="flag = !flag">&times;</span>
+    </div>
+
+    <!-- body start from here -->
+    <form [formGroup]="adduser" (ngSubmit)="onSubmit()">
+      <div class="body">
+        <div class="col-md-12 mb-10">
+          <label for="name" translate>First Name</label>
+          <input type="text" class="form-control" id="firstname" formControlName="firstname" />
+          <small [hidden]="form.firstname.valid || form.firstname.untouched" class="text-danger" translate>
+            <div *ngIf="form.firstname.errors.required" translate>First Name Required</div>
+            <div *ngIf="form.firstname.errors.maxlength" translate>
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-12 mb-10">
+          <label for="name" translate>Last Name</label>
+          <input type="text" class="form-control" id="lastname" formControlName="lastname" />
+          <small [hidden]="form.lastname.valid || form.lastname.untouched" class="text-danger" translate>
+            <div *ngIf="form.lastname.errors.required" translate>Last Name Required</div>
+            <div *ngIf="form.lastname.errors.maxlength" translate>
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+
+        <div class="col-12 mb-10">
+          <label class="d-block">Upload Profile Picture</label>
+          <input type="file" class="form-control" style="height: 38px" />
+        </div>
+
+        <div class="col-md-12 mb-10">
+          <label for="email" translate>Email</label>
+          <input type="text" class="form-control" id="email" formControlName="email" />
+          <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+            <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+            <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+            <div *ngIf="form.email.errors?.maxlength">
+              <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+
+        <div class="col-md-12 mb-10">
+          <label for="mobile" translate>Mobile</label>
+          <input type="text" class="form-control" id="mobile" formControlName="mobile" />
+          <small [hidden]="form.mobile.valid || form.mobile.untouched" class="text-danger" translate>
+            <div *ngIf="form.mobile.errors?.required" translate>Mobile Required</div>
+            <div *ngIf="form.mobile.errors?.pattern" translate>Invalid Mobile</div>
+          </small>
+        </div>
+
+        <div class="col-md-12 mb-10">
+          <label for="name" translate>Job Title</label>
+          <input type="text" class="form-control" id="jobtitle" formControlName="jobtitle" />
+          <small [hidden]="form.jobtitle.valid || form.jobtitle.untouched" class="text-danger" translate>
+            <div *ngIf="form.jobtitle.errors.required" translate>Job Title Required</div>
+            <div *ngIf="form.jobtitle.errors.maxlength" translate>
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-12 mb-10">
+          <label for="name" translate>Reporting Manager</label>
+          <select class="form-control" id="mannager" formControlName="selectedmanager">
+            <option selected value="">Choose..</option>
+            <option>Test User</option>
+            <option>Real User</option>
+            <option>Others User</option>
+          </select>
+          <small [hidden]="form.selectedmanager.valid || form.selectedmanager.untouched" class="text-danger" translate>
+            <div *ngIf="form.selectedmanager.errors.required" translate>Please select reporting manager.</div>
+            <div *ngIf="form.selectedmanager.errors.maxlength" translate>
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+
+        <div class="col-md-12 mb-10">
+          <label for="name" translate>Team</label>
+          <select class="form-control" id="team" formControlName="selectedteam">
+            <option selected value="">Choose..</option>
+            <option>1st team</option>
+            <option>2nd Team</option>
+            <option>3rd Team</option>
+          </select>
+          <small [hidden]="form.selectedteam.valid || form.selectedteam.untouched" class="text-danger" translate>
+            <div *ngIf="form.selectedteam.errors.required" translate>Please select team.</div>
+            <div *ngIf="form.selectedteam.errors.maxlength" translate>
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+
+        <div class="col-md-12 mb-10">
+          <label for="name" translate>Data Access</label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              id="Hirarchical"
+              type="radio"
+              class="custom-control-input"
+              value="Hirarchical"
+              name="dataaccess"
+              formControlName="dataaccess"
+            />
+            <label class="custom-control-label" for="Hirarchical">Hirarchical</label>
+          </div>
+
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              id="Global"
+              type="radio"
+              class="custom-control-input"
+              value="Global"
+              name="dataaccess"
+              formControlName="dataaccess"
+            />
+            <label class="custom-control-label" for="Global">Global</label>
+          </div>
+
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              id="Custom"
+              type="radio"
+              class="custom-control-input"
+              value="Custom"
+              name="dataaccess"
+              formControlName="dataaccess"
+            />
+            <label class="custom-control-label" for="Custom">Custom</label>
+          </div>
+        </div>
+
+        <div class="col-md-12 mb-10">
+          <select class="form-control" id="access1" formControlName="selectedaccess1">
+            <option selected value="">Choose..</option>
+            <option>1st team</option>
+            <option>2nd Team</option>
+            <option>3rd Team</option>
+          </select>
+          <small [hidden]="form.selectedaccess1.valid || form.selectedaccess1.untouched" class="text-danger" translate>
+            <div *ngIf="form.selectedaccess1.errors.required" translate>Please select</div>
+            <div *ngIf="form.selectedaccess1.errors.maxlength" translate>
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+
+        <div class="col-md-12 mb-10">
+          <select class="form-control" id="access2" formControlName="selectedaccess2">
+            <option selected value="">Choose..</option>
+            <option>1st team</option>
+            <option>2nd Team</option>
+            <option>3rd Team</option>
+          </select>
+          <small [hidden]="form.selectedaccess2.valid || form.selectedaccess2.untouched" class="text-danger" translate>
+            <div *ngIf="form.selectedaccess2.errors.required" translate>Please select</div>
+            <div *ngIf="form.selectedaccess2.errors.maxlength" translate>
+              <span translate>characters</span>
+            </div>
+          </small>
+        </div>
+      </div>
+
+      <!-- body ends here -->
+
+      <div class="footer text-right">
+        <input type="button" class="btn btn-cancel mr-2" value="Cancel" />
+        <input type="button" class="btn btn-submit" value="Create" />
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="max-width: 1200px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">User Hierarchy</h4>
+      </div>
+      <div class="modal-body" id="body">
+        <button type="button" class="btn add-user" onclick="showMySelf()">Show Myself</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

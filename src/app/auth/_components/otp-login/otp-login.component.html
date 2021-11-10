@@ -1,0 +1,55 @@
+<div class="login-container">
+  <div class="login-box">
+    <div class="container">
+      <div class="card mx-auto login-card">
+        <div class="card-img text-center">
+          <img class="d-block mx-auto mb-2 logo" src="assets/EvA-logo.png" alt="angular logo" />
+          <h4 class="card-title text-center" translate>Welcome</h4>
+          <p translate>Otp_Login_Subtitle</p>
+        </div>
+        <div class="card-body login-card-body">
+          <form (ngSubmit)="initiateLogin()" [formGroup]="loginForm" novalidate>
+            <div class="alert alert-danger" [hidden]="!error || isLoading" translate>Invalid_Mobile</div>
+
+            <div class="form-group">
+              <label for="mobile" translate>Mobile Number</label>
+              <div class="input-group mb-2">
+                <input type="text" class="form-control" id="mobile" formControlName="mobile" />
+                <img src="/assets/auth/Mobile.png" alt="Username" />
+              </div>
+              <span hidden translate>Mobile Number</span>
+              <small
+                [hidden]="loginForm.controls.mobile.valid || loginForm.controls.mobile.untouched"
+                class="text-danger"
+                translate
+              >
+                <div *ngIf="loginForm.controls.mobile.errors?.required" translate>Mobile_Required</div>
+                <div *ngIf="loginForm.controls.mobile.errors?.pattern" translate>Invalid_Mobile</div>
+              </small>
+            </div>
+
+            <a [routerLink]="['/verify']">
+              <button class="btn w-100 btn-otp" type="button" translate>Send otp</button>
+            </a>
+
+            <!-- <button class="btn w-100" type="submit" [disabled]="loginForm.invalid || isLoading">
+              <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+              <span translate>Send otp</span>
+            </button> -->
+          </form>
+          <div class="hr-otp">
+            <hr />
+          </div>
+          <div class="register-link">
+            <a [routerLink]="['/login']">
+              <button class="btn w-100 btn-otp" type="button" translate>Log in with credentials</button>
+            </a>
+            <p class="p-login" translate>
+              Don't have an account? <a [routerLink]="['/register']" translate>Register</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

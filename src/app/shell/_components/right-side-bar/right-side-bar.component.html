@@ -1,0 +1,225 @@
+<div class="bg-white">
+  <main role="main" class="container">
+    <div class="row">
+      <div class="">
+        <div class="starter-template">
+          <ul class="nav nav-tabs" id="myTab">
+            <li class="nav-item">
+              <a
+                (click)="clickTabEvent('EvA_Apps_Tab')"
+                [ngClass]="selectedTabName == 'EvA_Apps_Tab' ? 'nav-link active' : 'nav-link'"
+                id="EvA_Apps-tab"
+                data-toggle="tab"
+                href="javascript:void(0)"
+                ><span class="right-side-header" translate>EvA_Apps</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                (click)="clickTabEvent('News_Tab')"
+                [ngClass]="selectedTabName == 'News_Tab' ? 'nav-link active' : 'nav-link'"
+                id="News-tab"
+                data-toggle="tab"
+                href="javascript:void(0)"
+                ><span class="right-side-header" translate>News</span></a
+              >
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div
+              [ngClass]="selectedTabName == 'EvA_Apps_Tab' ? 'tab-pane fade show active' : 'tab-pane fade'"
+              id="EvA_Apps_Tab"
+            >
+              <h4 class="header-evaapps-news" translate>Header_1</h4>
+              <hr />
+              <div class="container mt-2">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/facebook.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Facebook</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/linkedIn.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>LinkedIn</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/twitter.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Twitter</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/instagram.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Instagram</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="header-evaapps-news" translate>Header_2</h4>
+              <hr />
+              <div class="container mt-2">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/facebook.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Facebook</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/linkedIn.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>LinkedIn</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/twitter.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Twitter</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/instagram.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Instagram</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="header-evaapps-news" translate>Header_3</h4>
+              <hr />
+              <div class="container mt-2">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/facebook.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Facebook</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/linkedIn.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>LinkedIn</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/twitter.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Twitter</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/instagram.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Instagram</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              [ngClass]="selectedTabName == 'News_Tab' ? 'tab-pane fade show active' : 'tab-pane fade'"
+              id="News_Tab"
+            >
+              <h4 class="header-evaapps-news" translate>Header_1</h4>
+              <hr />
+              <div class="container mt-2">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/facebook.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Facebook</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/linkedIn.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>LinkedIn</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/twitter.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Twitter</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/instagram.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Instagram</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="header-evaapps-news" translate>Header_2</h4>
+              <hr />
+              <div class="container mt-2">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/facebook.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Facebook</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/linkedIn.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>LinkedIn</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/twitter.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Twitter</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/instagram.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Instagram</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="header-evaapps-news" translate>Header_3</h4>
+              <hr />
+              <div class="container mt-2">
+                <div class="row">
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/facebook.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Facebook</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/linkedIn.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>LinkedIn</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/twitter.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Twitter</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 item">
+                    <div class="card item-card card-block">
+                      <img src="../../../assets/instagram.png" alt="Photo of sunset" />
+                      <span class="card-title mt-3 mb-3" translate>Instagram</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

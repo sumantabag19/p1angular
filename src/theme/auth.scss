@@ -1,0 +1,95 @@
+button {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border-radius: 8px;
+  text-transform: uppercase;
+  color: var(--quaternary);
+}
+
+.input-group img {
+  position: absolute;
+  left: 10px;
+  width: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-group input {
+  border-radius: 8px;
+  padding-left: 32px;
+}
+
+.input-group-text {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.p-login {
+  margin: 20px 0px 0px;
+}
+
+.login-card {
+  border-radius: 10px;
+  border: 1px solid var(--shadow-border);
+  box-shadow: var(--shadow);
+  width: 40%;
+  padding: 40px 20px;
+}
+
+.login-card-body {
+  padding-top: 0;
+}
+
+.login-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--background);
+  height: 100vh;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.ng-invalid.ng-touched:not(form) {
+  border-left: 4px solid theme-color("danger");
+}
+
+@media (max-width: 576px) {
+  .form-group {
+    margin-bottom: 5px;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+  h4 {
+    font-size: 1.2rem;
+  }
+  .form-group {
+    margin-bottom: 5px;
+  }
+  .login-card {
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 40%;
+    padding: 10px 5px;
+  }
+  .p-login {
+    margin: 10px 0px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,151 @@
+.nav.flex-column.nav-pills {
+  min-width: 150px;
+  height: calc(100vh - 111px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.nav-pills .nav-link {
+  color: #212121;
+  font-size: 14px;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #f5f7f9;
+  border-radius: 0;
+}
+
+.nav-pills .nav-link.active {
+  color: #212121;
+  background-color: #e5e5e5;
+  position: relative;
+  border-radius: 0;
+}
+
+.nav-pills .nav-link.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #ea9531;
+}
+
+.tags-cntnr .header {
+  padding: 6px 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tags-cntnr .header h5 {
+  font-size: 18px;
+  position: relative;
+  top: 5px;
+}
+
+.tags-cntnr .body {
+  padding: 10px 27px 10px 12px;
+  height: calc(100vh - 155px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.tags-cntnr .body .tags-widget {
+  padding: 0;
+  border-radius: 6px;
+}
+
+.tags-cntnr .body .tags-widget .header {
+  padding: 10px 12px;
+  background: #e5e5e5;
+  border-radius: 6px 6px 0 0;
+}
+
+.tags-cntnr .body .tags-widget .header h6 {
+  font-size: 14px;
+}
+
+/* .tags-cntnr .body .tags-widget .header span.float-right {
+                line-height: 0;
+            } */
+
+.tags-cntnr .body .tags-widget .header span.c-pointer {
+  font-size: 16px;
+  padding: 0;
+}
+
+.tags-cntnr .body .tags-widget .header span.float-right .dropdown-menu {
+  min-width: 105px;
+}
+
+.tags-cntnr .body .tags-widget .body {
+  height: 180px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px 12px;
+  background: #ffffff;
+  border-radius: 0;
+}
+
+.tags-cntnr .body .tags-widget .body ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tags-cntnr .body .tags-widget .body ul li {
+  margin-bottom: 10px;
+}
+
+.tags-cntnr .body .tags-widget .body ul li:last-child {
+  margin-bottom: 0;
+}
+
+.tags-cntnr .body .tags-widget .body ul li .action-btns {
+  float: right;
+}
+
+.tags-cntnr .body .tags-widget .body ul li .action-btns span {
+  color: #9c948a;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.tags-cntnr .body .tags-widget .body ul li .action-btns span:hover {
+  color: #4d4b4a;
+}
+
+.tags-cntnr .body .tags-widget .footer {
+  padding: 10px 12px;
+  background: #ececec;
+  border: 1px solid #ececec;
+  border-radius: 0 0 6px 6px;
+  position: relative;
+}
+
+.tags-cntnr .body .tags-widget .footer:hover,
+.tags-cntnr .body .tags-widget .footer:focus {
+  border: 1px solid #d4d4d4;
+}
+
+.tags-cntnr .body .tags-widget .footer .form-control {
+  height: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.tags-cntnr .body .tags-widget .footer .btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 23px;
+  height: 23px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 10px;
+  padding: 0;
+  padding-right: 1px;
+  border-radius: 50%;
+}

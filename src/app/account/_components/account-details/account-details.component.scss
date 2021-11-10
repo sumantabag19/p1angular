@@ -1,0 +1,322 @@
+.contact-details {
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.contact-details .short-details {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact-details .short-details .d-img {
+  display: inline-block;
+  width: 52px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #acacac;
+  border: 1px solid #ea9531;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.contact-details .short-details div {
+  width: 100%;
+  position: relative;
+  top: 6px;
+}
+
+.contact-details .short-details div h4 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.contact-details .short-details div h4 a {
+  width: 19px;
+  height: 19px;
+  line-height: 21px;
+  padding: 0;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 3px;
+  position: relative;
+  top: -2px;
+}
+
+.contact-details .short-details div span.d-block {
+  color: #7d7d7d;
+}
+
+.details-view {
+  width: 100%;
+}
+
+.details-view h4 {
+  font-size: 18px;
+  color: #ea9531;
+  margin-bottom: 10px;
+}
+
+.summary-details {
+  width: 100%;
+  margin-top: 14px;
+  padding-right: 15px;
+}
+
+.summary-details .summary {
+  padding: 10px 12px 7px 12px;
+}
+
+.summary-details .summary h6 {
+  font-size: 16px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.summary-details .summary .action-btns {
+  position: relative;
+  top: -5px;
+}
+
+.summary-details .summary .action-btns .btn {
+  height: auto;
+  padding: 4px 6px;
+  width: 28px;
+}
+
+.summary-details .summary .action-btns .btn.btn-secondary {
+  background: #9c9c9c !important;
+  color: #ffffff;
+}
+
+.summary-details .summary .action-btns .btn.btn-secondary:hover {
+  background: #858585 !important;
+  color: #ffffff;
+}
+
+.summary-details .summary .label-count {
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.summary-details .summary .label-count:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.summary-details .summary .label-count .count {
+  font-size: 20px;
+  font-family: "Nunito-Bold", sans-serif;
+  margin-bottom: 8px;
+}
+
+.summary-details .summary .label-count .label {
+  font-size: 12px;
+  color: #acacac;
+}
+
+.summary-details .touchpoints {
+  padding: 10px 12px 7px 12px;
+  text-align: center;
+}
+
+.summary-details .touchpoints .count {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Nunito-Bold", sans-serif;
+  border: 2px solid #707070;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.summary-details .touchpoints .label {
+  font-size: 12px;
+  color: #acacac;
+}
+
+.modal-title small {
+  font-size: 70%;
+  font-weight: 400;
+  position: relative;
+  top: -1px;
+  color: #555555;
+}
+
+.opportunities,
+.tasks,
+.appointments {
+  padding-right: 15px !important;
+}
+
+.opportunities .opportunity,
+.tasks .task,
+.appointments .appointment {
+  width: 100%;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 7px;
+}
+
+.opportunities .opportunity:last-child,
+.tasks .task:last-child,
+.appointments .appointment:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.opportunities .opportunity label,
+.tasks .task label,
+.appointments .appointment label {
+  font-size: 14px;
+  font-family: "Nunito-Bold", sans-serif;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.opportunities .opportunity b,
+.tasks .task b,
+.appointments .appointment b {
+  font-family: "Nunito-SemiBold", sans-serif;
+  display: inline-block;
+  color: #888888;
+  margin-right: 5px;
+}
+
+.journal-log {
+  height: auto !important;
+}
+
+.journal-log textarea {
+  border: none;
+  border-bottom: 2px solid #ea9531;
+  border-radius: 0;
+  margin-bottom: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05) !important;
+  resize: none;
+}
+
+.journal-log .logs {
+  width: 100%;
+  height: calc(100vh - 245px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.journal-log .logs .log {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+}
+
+.journal-log .logs .log:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.journal-log .logs .log b {
+  font-family: "Nunito-SemiBold", sans-serif;
+  display: inline-block;
+  color: #888888;
+  margin-right: 5px;
+}
+
+.call-log {
+  height: auto !important;
+}
+
+.call-log .logs {
+  width: 100%;
+  height: calc(100vh - 325px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.call-log .logs .log {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 3px;
+  margin-bottom: 7px;
+}
+
+.call-log .logs .log:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.call-log .logs .log b {
+  font-family: "Nunito-SemiBold", sans-serif;
+  display: inline-block;
+  color: #888888;
+  margin-right: 5px;
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  border: 1px dashed #acacac;
+  border-radius: 6px;
+  padding: 10px 12px 8px 12px;
+  margin-bottom: 10px;
+}
+
+.contact:last-child {
+  margin-bottom: 0;
+}
+
+.contact img {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #ea9531;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  top: 3px;
+}
+
+.contact .details {
+  width: 100%;
+}
+
+.contact .details h5 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.contact .details .desig-mob {
+  margin-bottom: 3px;
+}
+
+.contact .details .desig-mob span {
+  position: relative;
+  margin-right: 20px;
+}
+
+.contact .details .desig-mob span::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -14px;
+  width: 1px;
+  height: 15px;
+  background: #808080;
+}
+
+.contact .details .desig-mob span:last-child {
+  margin-right: 0;
+}
+
+.contact .details .desig-mob span:last-child::before {
+  display: none;
+}

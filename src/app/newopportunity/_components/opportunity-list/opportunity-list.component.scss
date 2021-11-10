@@ -1,0 +1,209 @@
+.widget-cntnr {
+  width: 100%;
+  position: relative;
+  background: #f1f4f6;
+  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.widget-cntnr .widget {
+  position: relative;
+  display: table-cell;
+  min-width: 240px;
+  width: 21%;
+  border-right: 1px solid #e5e5e5;
+  position: relative;
+  font-size: 12px;
+}
+
+.widget-cntnr .widget:first-child {
+  border-radius: 4px 0 0 0;
+}
+
+.widget-cntnr .widget:last-child {
+  border-radius: 0 4px 0 0;
+  border-right: none;
+}
+
+.widget-cntnr .widget .header {
+  width: 100%;
+  padding: 10px 12px 9px 12px;
+  background: #ffffff;
+}
+
+.widget-cntnr .widget .header h6 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.widget-cntnr .widget .body {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 200px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px 10px 9px 10px;
+}
+
+.widget-cntnr .widget .body .opp-widget {
+  width: 100%;
+  padding: 5px 12px 7px 12px;
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  transition: background 0.15s ease-in-out;
+  cursor: grab;
+}
+
+.widget-cntnr .widget .body .opp-widget:hover {
+  background: #fffafa;
+}
+
+.widget-cntnr .widget .body .opp-widget .name {
+  margin-bottom: 0;
+}
+
+.widget-cntnr .widget .body .opp-widget .amount {
+  margin-top: 1px;
+}
+
+.widget-cntnr .widget .body .opp-widget .amount i {
+  font-size: 12px;
+}
+
+.widget-cntnr .widget .body .opp-widget .amount b {
+  font-size: 14px !important;
+  font-family: "Nunito-Bold", sans-serif;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons {
+  width: 100%;
+  text-align: right;
+  line-height: 0;
+  margin-top: 0;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons a {
+  font-size: 12px;
+  color: #000000;
+  opacity: 0.5;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons a:last-child {
+  margin-right: 0;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons a.fa-ellipsis-h {
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons a .fa-history,
+.widget-cntnr .widget .body .opp-widget .icons a .fa-tasks {
+  font-size: 11px;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons a:hover {
+  opacity: 0.7;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons .dropdown .dropdown-menu {
+  padding: 0.2rem 0;
+}
+
+.widget-cntnr .widget .body .opp-widget .icons .dropdown a.dropdown-item {
+  font-size: 12px;
+  color: #000000;
+  opacity: 1;
+}
+
+.widget-cntnr .widget .body .no-data {
+  color: #acacac;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 50%;
+}
+
+.widget-cntnr .widget .body .mCSB_container {
+  min-height: 100%;
+}
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 5px;
+}
+
+.mCSB_outside > .mCSB_container {
+  margin-right: 8px;
+}
+
+.mCSB_outside + .mCSB_scrollTools {
+  right: -1px;
+  top: 10px;
+  bottom: 8px;
+}
+
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+  margin-bottom: 12px;
+}
+
+.opp-history {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+.opp-history .timeline {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.opp-history .timeline::before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 20px;
+  height: calc(100% - 38px);
+  border-left: 1px dashed #e5e5e5;
+}
+
+.opp-history .timeline:last-child {
+  padding-bottom: 0;
+}
+
+.opp-history .timeline:last-child::before {
+  display: none;
+}
+
+.opp-history .timeline .img {
+  width: 45px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.opp-history .timeline .img img {
+  width: 24px;
+  height: 24px;
+}
+
+.opp-history .timeline div {
+  position: relative;
+  top: 1px;
+}
+
+.opp-history .timeline div b {
+  font-family: "Nunito-Bold", sans-serif;
+}

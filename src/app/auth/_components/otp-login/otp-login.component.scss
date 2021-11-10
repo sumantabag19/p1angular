@@ -1,0 +1,47 @@
+@import "src/theme/theme";
+@import "src/theme/auth";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+.register-link {
+  text-align: center;
+}
+
+.hr-otp {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.hr-otp hr::after {
+  content: "OR";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--shadow-border);
+  box-shadow: var(--shadow);
+  background-color: var(--quaternary);
+  font-size: 0.65rem;
+  position: relative;
+  padding-top: 5px;
+  top: -15px;
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+  .hr-otp {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .hr-otp hr::after {
+    width: 20px;
+    height: 20px;
+    font-size: 0.5rem;
+    padding-top: 3px;
+    top: -15px;
+  }
+}

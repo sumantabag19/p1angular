@@ -1,0 +1,79 @@
+<div class="login-container">
+  <div class="login-box">
+    <div class="container">
+      <div class="card mx-auto login-card">
+        <div class="card-img text-center">
+          <img class="d-block mx-auto mb-2 logo" src="assets/EvA-logo.png" alt="angular logo" />
+          <h4 class="card-title text-center" translate>Login_Title</h4>
+          <p translate>Login_Subtitle</p>
+        </div>
+        <div class="card-body login-card-body">
+          <form (ngSubmit)="initiateLogin()" [formGroup]="loginForm" novalidate>
+            <div class="alert alert-danger" [hidden]="!error || isLoading" translate>
+              Username or password incorrect.
+            </div>
+
+            <div class="form-group">
+              <label for="email" translate>Username</label>
+              <div class="input-group mb-2">
+                <input type="text" class="form-control" id="inlineFormInputGroup" formControlName="email" />
+                <img src="/assets/auth/Log in ID.png" alt="Username" />
+              </div>
+              <span hidden translate>Username</span>
+              <small
+                [hidden]="loginForm.controls.email.valid || loginForm.controls.email.untouched"
+                class="text-danger"
+                translate
+              >
+                Username_Required
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="password" translate>Password</label>
+              <div class="input-group mb-2">
+                <input type="text" class="form-control" id="inlineFormInputGroup" formControlName="password" />
+                <img src="/assets/auth/Password.png" alt="Password" />
+              </div>
+              <small
+                [hidden]="loginForm.controls.password.valid || loginForm.controls.password.untouched"
+                class="text-danger"
+                translate
+              >
+                Password_Required
+              </small>
+            </div>
+
+            <div class="row mb-2">
+              <div class="col-md-12 col-lg-6">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" formControlName="remember" />
+                    <span translate class="login-link" translate>Keep me logged in</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 forgot-password">
+                <a [routerLink]="['/forgot-password']" class="stretched-link login-link" translate>Forgot Password?</a>
+              </div>
+            </div>
+            <button class="btn w-100" type="submit" [disabled]="loginForm.invalid || isLoading">
+              <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+              <span translate>Login</span>
+            </button>
+          </form>
+          <div class="hr-otp">
+            <hr />
+          </div>
+          <div class="otp-flow">
+            <a [routerLink]="['/otp-login']">
+              <button class="btn w-100 btn-otp" type="button" translate>Log in with otp</button>
+            </a>
+            <p class="p-login" translate>
+              Don't have an account? <a [routerLink]="['/register']" translate>Register</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

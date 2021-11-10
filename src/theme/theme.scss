@@ -1,0 +1,180 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+/* You can add global styles to this file, and also import other style files */
+// @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+// @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+
+:root {
+  --primary: #ea9531;
+  --secondary: #cdcdcd;
+  --tertiary: #212121;
+  --quaternary: #fff;
+  --background: #f1f4f6;
+  --shadow-border: #00000017;
+  --shadow: 0 0rem 1rem rgba(0, 0, 0, 0.09) !important;
+
+  --toast-success: #4caf50;
+  --toast-error: #f44336;
+  --toast-info: #2196f3;
+  --toast-warning: #ff9800;
+}
+
+// Common CSS
+body {
+  background: var(--background);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+label {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  color: var(--tertiary);
+}
+
+label span {
+  font-size: 0.7rem;
+  color: var(--secondary);
+}
+
+button {
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+.button-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--quaternary);
+}
+
+.button-secondary {
+  background-color: var(--tertiary);
+  border-color: var(--tertiary);
+  color: var(--quaternary);
+}
+
+input {
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+
+h1 h2 h3 h4 {
+  font-weight: 500;
+  color: var(--tertiary);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+//End Common CSS
+
+// Common Media Query
+@media (max-width: 576px) {
+  p {
+    font-size: 0.75rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  input {
+    font-size: 0.6rem;
+  }
+
+  button {
+    font-size: 0.6rem;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 0.6rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  input {
+    font-size: 0.6rem;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+}
+
+// End Common Media Query
+
+.active {
+  color: #868e96;
+}
+
+.navbar-nav .nav-link {
+  width: 150px;
+}
+
+// toastr
+.toast-success {
+  background-color: var(--toast-success);
+}
+.toast-error {
+  background-color: var(--toast-error);
+}
+.toast-info {
+  background-color: var(--toast-info);
+}
+.toast-warning {
+  background-color: var(--toast-warning);
+}
+// end toastr

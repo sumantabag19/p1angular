@@ -1,0 +1,158 @@
+<div class="container-fluid side-form-right p-0" style="background-color: #ffffff !important">
+  <div class="header">
+    <h4 translate>Task.addTask.Add_task</h4>
+  </div>
+  <form [formGroup]="contactForm" (submit)="addTaskSubmit()" novalidate>
+    <div class="body">
+      <!-- Title  -->
+      <div class="mb-10">
+        <label for="title" translate>Task.addTask.Title</label>
+        <input type="text" class="form-control form-control-sm" formControlName="title" />
+        <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+              <div *ngIf="form.email.errors.required" translate>Title is required</div>
+            </small> -->
+      </div>
+
+      <!-- Description -->
+      <div class="mb-10">
+        <label for="desc" translate>Task.addTask.Description</label>
+        <textarea class="form-control text-area form-control-sm" formControlName="desc" rows="3"></textarea>
+        <!-- <small [hidden]="form.address.valid || form.address.untouched" class="text-danger" translate>
+              <div *ngIf="form.address.errors.required" translate>Description is required</div>
+            </small> -->
+      </div>
+
+      <!-- Task type -->
+      <div class="mb-10">
+        <label for="taskType" translate>Task.addTask.Task_type</label>
+        <select class="form-control" formControlName="taskType" style="height: auto">
+          <option>Option-1</option>
+          <option>Option-2</option>
+          <option>Option-3</option>
+          <option>Option-4</option>
+          <option>Option-5</option>
+        </select>
+        <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+              <div *ngIf="form.email.errors.required" translate>Task type is required</div>
+            </small> -->
+      </div>
+
+      <!-- Due-date and Time -->
+      <div class="row">
+        <!-- Date -->
+        <div class="col pr-0 mb-10">
+          <label for="dueDate" translate>Task.addTask.Due_date</label>
+          <!-- <input class="form-control" type="date" formControlName="dueDate" /> -->
+          <!-- <mdb-date-picker [inline]="true" formControlName="dueDate" [options]="myDatePickerOptions"> </mdb-date-picker> -->
+          <input type="text" class="form-control" bsDatepicker formControlName="dueDate" />
+        </div>
+
+        <!-- Time -->
+        <div class="col mb-10">
+          <label for="time" translate>Task.addTask.Time</label>
+          <!-- <input class="form-control" type="time" formControlName="time" /> -->
+          <ng-template #popTemplate>
+            <timepicker formControlName="time" [showMeridian]="true" [(ngModel)]="time"></timepicker>
+          </ng-template>
+          <input
+            [popover]="popTemplate"
+            value="{{ time | date: 'HH:mm' }}"
+            [outsideClick]="true"
+            placement="bottom"
+            formControlName="time"
+            class="form-control form-control-sm"
+          />
+        </div>
+      </div>
+
+      <!-- Outcome  -->
+      <div class="mb-10">
+        <label for="outcome" translate>Task.addTask.Outcome</label>
+        <!-- <input type="text" class="form-control" id="email" formControlName="email" /> -->
+        <select class="form-control form-control-sm" formControlName="outcome" style="height: auto">
+          <option>Select</option>
+          <option>Option-1</option>
+          <option>Option-2</option>
+          <option>Option-3</option>
+        </select>
+        <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+              <div *ngIf="form.email.errors.required" translate>Task type is required</div>
+            </small> -->
+      </div>
+
+      <!-- Delegated to -->
+      <div class="mb-10">
+        <label for="delegatedTo" translate>Task.addTask.Delegated_to</label>
+        <!-- <input type="text" class="form-control" id="email" formControlName="email" /> -->
+        <select class="form-control form-control-sm" formControlName="delegatedTo" style="height: auto">
+          <option>Select</option>
+          <option>Option-1</option>
+          <option>Option-2</option>
+          <option>Option-3</option>
+        </select>
+        <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+              <div *ngIf="form.email.errors.required" translate>Task type is required</div>
+            </small> -->
+      </div>
+
+      <!-- Related to -->
+      <div class="mb-10">
+        <label for="relatedTo" translate>Task.addTask.Related_to</label>
+        <!-- <input type="text" class="form-control" id="email" formControlName="email" /> -->
+        <select class="form-control form-control-sm" formControlName="relatedTo" style="height: auto">
+          <option>Select</option>
+          <option>Option-1</option>
+          <option>Option-2</option>
+          <option>Option-3</option>
+        </select>
+        <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+              <div *ngIf="form.email.errors.required" translate>Task type is required</div>
+            </small> -->
+      </div>
+
+      <!-- Collaborator -->
+      <div class="mb-10">
+        <label for="collaborator" translate>Task.addTask.Collaborator</label>
+        <input type="text" class="form-control form-control-sm" formControlName="collaborator" />
+        <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+              <div *ngIf="form.email.errors.required" translate>Title is required</div>
+            </small> -->
+      </div>
+
+      <!-- Selected User -->
+      <div class="mb-10">
+        <label for="selectedUser" translate>Task.addTask.Selected_User</label>
+        <input type="text" class="form-control form-control-sm" formControlName="selectedUser" />
+        <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+              <div *ngIf="form.email.errors.required" translate>Title is required</div>
+            </small> -->
+      </div>
+
+      <!-- Mark as complete -->
+      <div class="mb-10">
+        <!-- <input type="checkbox" formControlName="markComplete" />
+              <label for="markComplete" translate>Task.addTask.Mark_as_complete</label> -->
+        <div class="form-check pl-0">
+          <label class="form-check-label d-block">
+            <input type="checkbox" class="form-check-input m-0 mr-2" formControlName="markComplete" />
+            <span translate style="position: relative; left: 22px; top: -3px; font-size: 12px; color: #212121"
+              >Task.addTask.Mark_as_complete</span
+            >
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button class="btn btn-reset mr-2" type="submit" [disabled]="contactForm.invalid || isLoading">
+        <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+        <span translate>Cancel</span>
+      </button>
+
+      <button class="btn btn-eva" type="submit" [disabled]="contactForm.invalid || isLoading">
+        <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+        <span translate>Save</span>
+      </button>
+    </div>
+  </form>
+</div>

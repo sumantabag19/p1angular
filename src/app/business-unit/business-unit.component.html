@@ -1,0 +1,106 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h3>
+      <span translate>Business Unit</span>
+    </h3>
+    <app-loader [isLoading]="isLoading"></app-loader>
+  </div>
+
+  <div class="d-flex justify-content-start">
+    <button class="btn btn-primary mb-3 mr-2" [disabled]="isLoading" (click)="openEditModal(false, {})">
+      <i class="fa fa-plus"></i> Add Business unit
+    </button>
+    <button class="btn btn-primary mb-3" [disabled]="isLoading"><i class="fa fa-download"></i> Export to Excel</button>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <div class="form-group form-inline">
+      <label>Show</label>
+      <select
+        class="form-control form-control-sm mr-2 ml-2"
+        id="pages"
+        [(ngModel)]="pagination.pageSize"
+        (change)="pageSizeChanged()"
+      >
+        <option>5</option>
+        <option>10</option>
+        <option>25</option>
+        <option>50</option>
+      </select>
+      <small class="text-muted"> items per page </small>
+    </div>
+
+    <div class="form-group form-inline">
+      <form class="form-inline" #filterForm="ngForm" (ngSubmit)="applyFilter()">
+        <div class="form-group mx-sm-3 mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="searchText"
+            name="searchText"
+            placeholder="Search"
+            [(ngModel)]="userParams.searchText"
+          />
+        </div>
+        <button class="btn btn-primary mb-2" type="submit" [disabled]="isLoading">
+          <!-- <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i> -->
+          <span translate>Filter</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>BU Name</th>
+          <th>Parent BU</th>
+          <th>Email</th>
+          <th>Website</th>
+          <th>Alias 1</th>
+          <th>Alias 2</th>
+          <th>Alias 3</th>
+          <th>
+            <button class="btn btn-sm btn-outline-primary" disabled>
+              <i class="fa fa-edit"></i>
+            </button>
+          </th>
+          <th>
+            <button class="btn btn-sm btn-outline-danger" disabled><i class="fa fa-trash-alt"></i></button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of bunits; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.buName }}</td>
+          <td>{{ item.parentBuName }}</td>
+          <td>{{ item.emailId }}</td>
+          <td>{{ item.website }}</td>
+          <td>{{ item.buAlias1 }}</td>
+          <td>{{ item.buAlias2 }}</td>
+          <td>{{ item.buAlias3 }}</td>
+          <th>
+            <button class="btn btn-sm btn-outline-primary" (click)="openEditModal(true, item)">
+              <i class="fa fa-edit"></i>
+            </button>
+          </th>
+          <th>
+            <button class="btn btn-sm btn-outline-danger" (click)="confirm(item.id)">
+              <i class="fa fa-trash-alt"></i>
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <div class="form-group form-inline">Showing {{ pagination.pageNumber }} of {{ pagination.totalPages }} pages</div>
+    <div class="form-group form-inline">
+      <app-pagination [pagination]="pagination" (pageChangedEvent)="pageChanged($event)"></app-pagination>
+    </div>
+  </div>
+</div>

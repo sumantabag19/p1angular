@@ -1,0 +1,599 @@
+<div class="col-12">
+  <div class="card filters">
+    <div class="inner-top">
+      <div class="row">
+        <div class="col-lg col-md-auto col-sm-auto">
+          <span class="page-title">Contacts (3)</span>
+        </div>
+        <div class="col-lg col-md col-sm">
+          <div class="row">
+            <div class="col pr-0">
+              <div class="input-group search-grp">
+                <input type="text" class="form-control" placeholder="Search Contacts" />
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-search"></i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto pr-0">
+              <div class="dropdown">
+                <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                  Import/Export
+                </a>
+
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-upload"></i>
+                    Import
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-download"></i>
+                    Export
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <input type="button" class="btn btn-eva" value="Edit Columns" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inner-bottom">
+      <div class="row">
+        <div class="col-2 pr-0">
+          <div class="row">
+            <div class="col-auto">
+              <label>Lead Stage</label>
+            </div>
+            <div class="col pl-0">
+              <select class="form-control">
+                <option>All</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col pr-0">
+          <div class="row">
+            <div class="col-auto">
+              <label>Lead Account</label>
+            </div>
+            <div class="col pl-0">
+              <select class="form-control">
+                <option>All</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col pr-0">
+          <div class="row">
+            <div class="col-auto">
+              <label>Owner</label>
+            </div>
+            <div class="col pl-0">
+              <select class="form-control">
+                <option>All</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="row">
+            <div class="col-auto">
+              <label>Date Range</label>
+            </div>
+            <div class="col pl-0">
+              <select class="form-control">
+                <option>Last Activity</option>
+              </select>
+            </div>
+            <div class="col pl-0">
+              <select class="form-control">
+                <option>All Time</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12">
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" />
+          </th>
+          <th>Created On</th>
+          <th>Contact NAME</th>
+          <th>Contact STATUS</th>
+          <th>EMAIL & Mobile</th>
+          <th>State & City</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="min-width: 30px; width: 30px; max-width: 30px">
+            <input type="checkbox" />
+          </td>
+          <td>
+            <div>24-07-2020</div>
+            <div>10:10 AM</div>
+          </td>
+          <td>
+            <div>Debasish Mohanty</div>
+            <div>Google</div>
+          </td>
+          <td>Opportunity</td>
+          <td>
+            <div>dmohanty@gmail.com</div>
+            <div>9875201470</div>
+          </td>
+          <td>
+            <div>Odisha</div>
+            <div>Bhubaneswar</div>
+          </td>
+          <td class="text-right">
+            <!-- <span class="fas fa-history c-pointer" style="color: #707070">
+
+            </span> -->
+            <a
+              class="fas fa-history c-pointer"
+              style="color: #707070"
+              href="javascript:;"
+              (click)="getcontacthistory()"
+            ></a>
+          </td>
+          <td class="dropdown text-right">
+            <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:;" (click)="getcontactdetail()">
+                <i class="fas fa-eye"></i>
+                View Details
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-dollar-sign"></i>
+                Add Oppertunity
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-file-medical"></i>
+                Add Note
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-tasks"></i>
+                Add Task
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-trash-alt"></i>
+                Delete
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="min-width: 30px; width: 30px; max-width: 30px">
+            <input type="checkbox" />
+          </td>
+          <td>
+            <div>24-07-2020</div>
+            <div>10:10 AM</div>
+          </td>
+          <td>
+            <div>Debasish Mohanty</div>
+            <div>Google</div>
+          </td>
+          <td>Opportunity</td>
+          <td>
+            <div>dmohanty@gmail.com</div>
+            <div>9875201470</div>
+          </td>
+          <td>
+            <div>Odisha</div>
+            <div>Bhubaneswar</div>
+          </td>
+          <td class="text-right">
+            <a
+              class="fas fa-history c-pointer"
+              style="color: #707070"
+              href="javascript:;"
+              (click)="getcontacthistory()"
+            ></a>
+          </td>
+          <td class="dropdown text-right">
+            <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:;" (click)="getcontactdetail()">
+                <i class="fas fa-eye"></i>
+                View Details
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-dollar-sign"></i>
+                Add Oppertunity
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-file-medical"></i>
+                Add Note
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-tasks"></i>
+                Add Task
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-trash-alt"></i>
+                Delete
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="min-width: 30px; width: 30px; max-width: 30px">
+            <input type="checkbox" />
+          </td>
+          <td>
+            <div>24-07-2020</div>
+            <div>10:10 AM</div>
+          </td>
+          <td>
+            <div>Debasish Mohanty</div>
+            <div>Google</div>
+          </td>
+          <td>Opportunity</td>
+          <td>
+            <div>dmohanty@gmail.com</div>
+            <div>9875201470</div>
+          </td>
+          <td>
+            <div>Odisha</div>
+            <div>Bhubaneswar</div>
+          </td>
+          <td class="text-right">
+            <a
+              class="fas fa-history c-pointer"
+              style="color: #707070"
+              href="javascript:;"
+              (click)="getcontacthistory()"
+            ></a>
+          </td>
+          <td class="dropdown text-right">
+            <span class="fas fa-ellipsis-h c-pointer" style="font-size: 20px" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:;" (click)="getcontactdetail()">
+                <i class="fas fa-eye"></i>
+                View Details
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-dollar-sign"></i>
+                Add Oppertunity
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-file-medical"></i>
+                Add Note
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-tasks"></i>
+                Add Task
+              </a>
+              <a class="dropdown-item" href="javascript:;">
+                <i class="fas fa-trash-alt"></i>
+                Delete
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="side-form hide-me">
+  <div class="inner">
+    <div class="header">
+      <h4>Create Contact</h4>
+      <span class="close">&times;</span>
+    </div>
+    <div class="body">
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-auto mb-10">
+              <label class="d-block">Salutation</label>
+              <select class="form-control form-control-sm">
+                <option>Mr</option>
+              </select>
+            </div>
+            <div class="col pl-0 mb-10">
+              <label class="d-block">First Name</label>
+              <input type="text" class="form-control form-control-sm" />
+            </div>
+            <div class="col pl-0 mb-10">
+              <label class="d-block">Last Name</label>
+              <input type="text" class="form-control form-control-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-7 pr-0 mb-10 text-icon">
+          <label class="d-block">Email</label>
+          <input type="email" class="form-control form-control-sm" />
+          <span
+            class="fas fa-plus-circle icon-label c-pointer"
+            title="Add More Email"
+            data-toggle="modal"
+            data-target="#mdlMoreEmails"
+          ></span>
+        </div>
+        <div class="col-5 mb-10 text-icon">
+          <label class="d-block">Mobile No</label>
+          <input type="text" class="form-control form-control-sm" />
+          <span
+            class="fas fa-plus-circle icon-label c-pointer"
+            title="Add More Number"
+            data-toggle="modal"
+            data-target="#mdlMoreNumbers"
+            style="right: 24px"
+          ></span>
+        </div>
+        <div class="col-7 pr-0 mb-10">
+          <label class="d-block">Account</label>
+          <input type="text" class="form-control form-control-sm" />
+        </div>
+        <div class="col-5 mb-10">
+          <label class="d-block">Designation</label>
+          <input type="text" class="form-control form-control-sm" />
+        </div>
+        <div class="col-12 mb-10">
+          <label class="d-block">Address</label>
+          <textarea class="form-control" rows="2"></textarea>
+        </div>
+        <div class="col-6 pr-0 mb-10">
+          <label class="d-block">City</label>
+          <input type="text" class="form-control form-control-sm" />
+        </div>
+        <div class="col-6 mb-10">
+          <label class="d-block">State</label>
+          <input type="text" class="form-control form-control-sm" />
+        </div>
+        <div class="col-6 pr-0 mb-10">
+          <label class="d-block">Country</label>
+          <select class="form-control form-control-sm">
+            <option>Select</option>
+          </select>
+        </div>
+        <div class="col-6 mb-10">
+          <label class="d-block">Zip Code</label>
+          <input type="text" class="form-control form-control-sm" />
+        </div>
+
+        <div class="col-12 mb-10">
+          <label class="d-block">Contact Owner</label>
+          <select class="form-control form-control-sm">
+            <option>Select</option>
+          </select>
+        </div>
+      </div>
+
+      <h5 class="mt-2 mb-2" style="font-size: 16px">Add Visiting Card</h5>
+      <div class="row">
+        <div class="col pr-0 mb-10">
+          <div class="v-card">
+            <span class="d-block">
+              <label>Card Front</label>
+              <span class="float-right">
+                <span class="fas fa-camera mr-2"></span>
+                <span class="fas fa-expand"></span>
+              </span>
+            </span>
+            <div class="img-area mb-10">
+              <span>image</span>
+            </div>
+            <input type="file" class="form-control" />
+          </div>
+        </div>
+        <div class="col mb-10">
+          <div class="v-card">
+            <span class="d-block">
+              <label>Card Back</label>
+              <span class="float-right">
+                <span class="fas fa-camera mr-2"></span>
+                <span class="fas fa-expand"></span>
+              </span>
+            </span>
+            <div class="img-area mb-10">
+              <span>image</span>
+            </div>
+            <input type="file" class="form-control" />
+          </div>
+        </div>
+      </div>
+
+      <h5 class="mt-2 mb-2" style="font-size: 16px">Contact Tags</h5>
+      <div class="accordion" id="contactTags">
+        <div class="card">
+          <div class="card-header" data-toggle="collapse" data-target="#t1">
+            <h5>Technical Knowledge</h5>
+          </div>
+
+          <div id="t1" class="collapse show" data-parent="#contactTags">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header collapsed" data-toggle="collapse" data-target="#t2">
+            <h5>Position</h5>
+          </div>
+          <div id="t2" class="collapse" data-parent="#contactTags">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header collapsed" data-toggle="collapse" data-target="#t3">
+            <h5>Work Capability</h5>
+          </div>
+          <div id="t3" class="collapse" data-parent="#contactTags">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Dot Net Developer</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" />
+                    <span>Automation Testing</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <input type="button" class="btn btn-eva mr-2" value="Save & New" />
+      <input type="button" class="btn btn-secondary" value="Save" />
+    </div>
+  </div>
+</div>
+
+<!-- Add More Emails Modal -->
+<div class="modal fade" id="mdlMoreEmails" tabindex="-1">
+  <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add More Emails</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="w-100 mb-20">
+          <label>Enter your office mail</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="w-100 mb-4">
+          <label>Enter your work mail</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="w-100 text-center">
+          <input type="button" class="btn btn-secondary" value="Save" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add More Numbers Modal -->
+<div class="modal fade" id="mdlMoreNumbers" tabindex="-1"></div>

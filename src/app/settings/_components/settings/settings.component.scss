@@ -1,0 +1,55 @@
+@import "src/theme/theme";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+.jumbotron {
+  padding: 1rem 2rem;
+}
+
+img.img-setting {
+  width: 36px;
+}
+
+.settings-section {
+  padding-bottom: 12px;
+}
+
+.settings-inner-section {
+  border-radius: 12px;
+  padding: 12px;
+  background-color: var(--quaternary);
+}
+
+.settings-sub-section {
+  padding-left: 0;
+}
+
+.settings-text-header {
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.settings-text-sub-header {
+  font-size: 14px;
+}
+
+.settings-text-info {
+  font-size: 12px;
+}
+
+.settings-box {
+  border: 2px dashed var(--secondary);
+  border-radius: 12px;
+  margin: 5px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  min-height: 80px;
+  cursor: pointer;
+}
+
+.settings-box:hover {
+  color: blue;
+}
+
+.settings-box span {
+  color: var(--secondary);
+}

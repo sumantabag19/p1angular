@@ -1,0 +1,153 @@
+.timelines {
+  width: 100%;
+  min-height: 83vh;
+  /* overflow-x: hidden;
+    overflow-y: auto; */
+  padding-right: 145px;
+}
+
+.timelines .timeline {
+  width: 100%;
+  display: flex;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.timelines .timeline::before {
+  content: "";
+  position: absolute;
+  top: 49px;
+  left: 24px;
+  height: calc(100% - 48px);
+  border-left: 1px dashed #707070;
+  z-index: -1;
+}
+
+.timelines .timeline:last-child {
+  padding-bottom: 0;
+}
+
+.timelines .timeline:last-child::before {
+  display: none;
+}
+
+.timelines .timeline .img {
+  width: 52px;
+  height: 50px;
+  line-height: 44px;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.timelines .timeline .img img {
+  width: 24px;
+  height: 24px;
+}
+
+.timelines .timeline .details {
+  width: 100%;
+  position: relative;
+  top: 6px;
+}
+
+.timelines .timeline .details .date {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.timelines .timeline .details .status {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.timelines .timeline .details .status span {
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 2px 20px;
+}
+
+.timelines .timeline .details .status span.selected {
+  background: #ea9531;
+  color: #ffffff;
+}
+
+.touchpoints {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  text-align: center;
+}
+
+.touchpoints h5 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.touchpoints span {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 38px;
+  border: 2px solid #212121;
+  border-radius: 50%;
+}
+
+.filters {
+  width: 100%;
+}
+
+.filters h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.filters .dropdown .btn-light {
+  background: #ffffff;
+  border: 1px solid #c9c9c9;
+}
+
+.filters h6 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.filters ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filters ul li {
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.filters ul li:last-child {
+  margin-bottom: 0;
+}
+
+.filters ul li img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  position: relative;
+  top: -1px;
+}
+
+.filters ul li .count {
+  color: #acacac;
+  margin-left: 2px;
+}
+
+.filters ul li input[type="checkbox"] {
+  position: relative;
+  top: 3px;
+}

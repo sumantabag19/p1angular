@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <h1>
+      <img class="logo" src="assets/logo.png" alt="angular logo" />
+
+      <span translate>Dashboard</span>
+    </h1>
+    <!-- <app-loader [isLoading]="isLoading"></app-loader> -->
+    <!-- <q [hidden]="isLoading">{{ quote }}</q> -->
+  </div>
+</div>
+
+<div class="container">
+  <button (click)="openGeolocation()">Add geoLocation</button>
+</div>
+
+<div style="font-size: medium; margin-left: 100px">
+  {{ address }}
+  <br />
+  {{ latitude1 }}
+  <br />
+  {{ longitude1 }}
+  <div class="content">
+    <h4>datepicker should display current date:</h4>
+    <div class="row">
+      <div class="col-xs-12 col-12 col-md-4 form-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter date"
+          #dp="bsDatepicker"
+          bsDatepicker
+          [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', returnFocusToInput: true }"
+        />
+
+        <!-- <input class="form-control"
+      placeholder="Datepicker"
+      bsDatepicker 
+      [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"> -->
+      </div>
+      <div class="col-xs-12 col-12 col-md-4 form-group">
+        <input type="text" class="form-control" />
+      </div>
+    </div>
+  </div>
+</div>

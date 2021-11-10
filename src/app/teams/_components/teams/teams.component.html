@@ -1,0 +1,210 @@
+<div class="container-lg mt-2">
+  <div class="col-12">
+    <div class="card filters">
+      <div class="inner-top">
+        <div class="row">
+          <!-- <div class="col-sm-2">
+            <div class="settings-text-header" translate>
+              <a routerLink="/settings" style="color: #ea9531">Admin Settings</a>
+              / User
+            </div>
+          </div>
+
+          <div class="col-sm-6"></div>
+          <div class="col-sm-4">
+            <input class="search-team-inp" type="text" placeholder="Search team" />
+            <button class="create-team-icn"><i class="fa fa-search"></i></button>
+            <button class="btn create-team-btn" (click)="flag = !flag" translate>Team.Create_team</button>
+          </div> -->
+          <div class="col-lg col-md-auto col-sm-auto">
+            <span class="page-title">
+              <a routerLink="/settings" class="text-eva">Admin Settings</a>
+              <span> / Teams</span>
+            </span>
+          </div>
+          <div class="col-lg col-md col-sm">
+            <div class="row">
+              <div class="col pr-0">
+                <div class="input-group search-grp">
+                  <input type="text" class="form-control" placeholder="Search team" />
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <input type="button" class="btn btn-secondary" value="Create Team" (click)="flag = !flag" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th translate>Team.TEAM_NAME</th>
+            <th class="text-center" translate>Team.SUB_TEAMS</th>
+            <th class="text-center" translate>Team.MEMBERS</th>
+            <th translate>Team.TEAM_MANAGER</th>
+            <th translate>Team.CREATED_BY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of bunits; let i = index">
+            <td>{{ item['f1'] }}</td>
+            <td class="text-center">
+              <a (click)="openSubTeams()" class="c-pointer text-eva"
+                ><u>{{ item['f2'] }}</u></a
+              >
+            </td>
+            <td class="text-center">
+              <a (click)="openTeamMembers()" class="c-pointer text-eva"
+                ><u>{{ item['f3'] }}</u></a
+              >
+            </td>
+            <td>{{ item['f4'] }}</td>
+            <td>
+              {{ item['f5'] }} <br />
+              <div style="color: dimgrey; font-size: smaller">10-11-2020 10:30AM</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div [ngClass]="flag ? 'slide-form hide-me' : 'slide-form show-me'">
+  <div class="form-widget">
+    <div class="header">
+      <h4 translate>Team.Create_team</h4>
+      <span class="close" (click)="flag = !flag">&times;</span>
+    </div>
+
+    <form [formGroup]="addTeam" (ngSubmit)="onSubmitAddTeam()">
+      <div class="body">
+        <div class="form-row">
+          <div class="col-md-12">
+            <label for="email" class="d-block" translate>Team.Team_Name</label>
+            <div class="input-group mb-2">
+              <input type="text" class="form-control form-control-sm" formControlName="teamName" />
+            </div>
+            <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                                <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+                                <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+                                <div *ngIf="form.email.errors?.maxlength">
+                                  <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                                  <span translate>characters</span>
+                                </div>
+                              </small> -->
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-12">
+            <label for="email" class="d-block" translate>Team.Team_Manager</label>
+            <div class="input-group mb-2">
+              <select class="col-md-12 form-control form-control-sm" formControlName="teamManager">
+                <option>Select any one</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
+            </div>
+            <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                                <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+                                <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+                                <div *ngIf="form.email.errors?.maxlength">
+                                  <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                                  <span translate>characters</span>
+                                </div>
+                              </small> -->
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-12">
+            <label for="email" class="d-block" translate>Team.Add_Member</label>
+            <div class="input-group mb-2">
+              <input type="text" class="form-control form-control-sm" formControlName="addMembers" />
+            </div>
+            <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                                <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+                                <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+                                <div *ngIf="form.email.errors?.maxlength">
+                                  <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                                  <span translate>characters</span>
+                                </div>
+                              </small> -->
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-12">
+            <label for="email" class="d-block" translate>Team.Selected_User</label>
+            <div class="input-group mb-2">
+              <input type="text" class="form-control form-control-sm" formControlName="selectedUser" />
+            </div>
+            <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                                <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+                                <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+                                <div *ngIf="form.email.errors?.maxlength">
+                                  <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                                  <span translate>characters</span>
+                                </div>
+                              </small> -->
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-12">
+            <label for="email" class="d-block" translate>Team.make_sub_team</label>
+            <div class="input-group mb-2">
+              <select class="col-md-12 form-control form-control-sm" formControlName="subTeam">
+                <option>Select any one</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+              </select>
+            </div>
+            <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                                <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+                                <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+                                <div *ngIf="form.email.errors?.maxlength">
+                                  <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                                  <span translate>characters</span>
+                                </div>
+                              </small> -->
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-12">
+            <label for="email" class="d-block" translate>Team.Description</label>
+            <div class="input-group mb-2">
+              <textarea class="form-control" rows="2" formControlName="description"> </textarea>
+            </div>
+            <!-- <small [hidden]="form.email.valid || form.email.untouched" class="text-danger" translate>
+                                <div *ngIf="form.email.errors?.required" translate>Email Required</div>
+                                <div *ngIf="form.email.errors?.email" translate>Invalid Email</div>
+                                <div *ngIf="form.email.errors?.maxlength">
+                                  <span translate>Email should contain max</span> {{ form.email.errors?.maxlength.requiredLength }}
+                                  <span translate>characters</span>
+                                </div>
+                              </small> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer text-right">
+        <input type="button" class="btn btn-reset mr-2" value="Cancel" (click)="flag = !flag" />
+        <input type="button" class="btn btn-eva" value="Save" />
+      </div>
+    </form>
+  </div>
+</div>

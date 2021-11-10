@@ -1,0 +1,120 @@
+.task-summary {
+  padding: 0;
+}
+
+.task-summary .header {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.task-summary .header .title {
+  font-family: "Nunito-SemiBold";
+  font-size: 18px;
+  color: #acacac;
+}
+
+.task-summary .header .count {
+  font-family: "Nunito-SemiBold";
+  font-size: 26px;
+  color: #ea9531;
+  float: right;
+  position: relative;
+  top: 2px;
+}
+
+.task-summary .body {
+  padding: 10px 12px;
+}
+
+.task-summary .body .summary {
+  width: 100%;
+  display: flex;
+  padding: 10px 12px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.task-summary .body .summary img {
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+}
+
+.task-summary .body .summary div {
+  position: relative;
+  top: 1px;
+}
+
+.task-summary .body .summary div h5 {
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+
+.task-summary .body .summary div span {
+  font-size: 14px;
+  color: #acacac;
+}
+
+.tab-pane .table thead tr th {
+  border-radius: 0;
+}
+
+.nav.nav-pills {
+  padding: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.nav.nav-pills .nav-link {
+  background: none !important;
+  color: #acacac;
+  font-size: 16px;
+  padding: 10px 12px;
+  transition: color 0.15s ease-in-out;
+}
+
+.nav.nav-pills .nav-link:hover {
+  color: #777777;
+}
+
+.nav.nav-pills .nav-link.active {
+  color: #212121;
+  position: relative;
+}
+
+.nav.nav-pills .nav-link.active::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ea9531;
+}
+
+.search-grp {
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  max-width: 300px;
+  z-index: 11;
+}
+
+.search-grp .input-group-text {
+  background: none;
+  color: #212121;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.search-grp .input-group-text:hover {
+  background: #e5e5e5;
+}
+
+.task-details {
+  padding: 10px 15px 10px 12px !important;
+}
+
+.task-details label {
+  color: #7e7777;
+  font-size: 12px;
+}

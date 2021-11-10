@@ -1,0 +1,24 @@
+<div class="container" style="margin-top: 10px; display: inline">
+  <h4>Add GeoLocation.!</h4>
+  <button
+    style="margin-right: 10px; margin-top: -20px"
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    X
+  </button>
+  <hr />
+</div>
+
+<div style="width: 90%; margin-left: 10px">
+  {{ information }}
+
+  <button (click)="saveLocation()">Save Location</button>
+
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="10" style="height: 400px; width: 800px">
+    <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true" (dragEnd)="markerDragEnd($event)">
+    </agm-marker>
+  </agm-map>
+</div>
